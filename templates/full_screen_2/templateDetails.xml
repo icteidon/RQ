@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install PUBLIC "-//Joomla! 1.6//DTD template 1.0//EN" "http://www.joomla.org/xml/dtd/1.6/template-install.dtd">
+<install version="1.6" type="template">
+	<name>full_screen_2</name>
+	<creationDate>15/09/2010</creationDate>
+	<author>JoomSpirit</author>
+	<copyright>Copyright 2010 JoomSpirit</copyright>
+	<authorEmail>contact@joomspirit.com</authorEmail>
+	<authorUrl>http://www.joomspirit.com</authorUrl>
+	<version>1.0</version>
+	<description>&lt;h2&gt;IMPORTANT : Read the settings for this template&lt;/h2&gt;
+	&lt;h3&gt;
+	&lt;span style="font-weight:bold;color:red;"&gt;All informations is in your zip template in "help" directory : you must just open the manual.html&lt;/span&gt; &lt;br /&gt;
+	You will find in &lt;span style="color:blue;"&gt;how to configure the template, use the typography, the module positions for your modules, how to display tooltips, or another mootools effect of this template.&lt;/span&gt; &lt;br /&gt;
+	&lt;/h3&gt;
+	</description>
+<files>
+<filename>favicon.ico</filename>
+<filename>index.html</filename>
+<filename>index.php</filename>
+<filename>params.ini</filename>
+<filename>template_thumbnail.png</filename>
+<folder>css</folder>
+<folder>html</folder>
+<folder>images</folder>
+<folder>lib</folder>
+<folder>font</folder>
+</files>
+
+<positions>
+	<position>menu_left</position>
+	<position>menu_right</position>
+	<position>left</position>
+	<position>supersized</position>
+	<position>right</position>
+	<position>bottom_menu</position>
+	<position>top</position>
+	<position>translate</position>
+	<position>adress</position>
+	<position>bottom</position>
+	<position>logo</position>
+	<position>banner</position>
+	<position>header</position>
+	<position>footer</position>
+	<position>newsflash</position>
+	<position>search</position>
+	<position>pathway</position>
+	<position>breadcrumb</position>
+	<position>user1</position>
+	<position>user2</position>
+	<position>user3</position>
+	<position>user4</position>
+	<position>user5</position>
+	<position>user6</position>
+	<position>user7</position>
+	<position>user8</position>
+	<position>user9</position>
+	<position>advert1</position>
+	<position>content_one</position>
+	<position>content_two</position>
+	<position>content_three</position>
+	<position>content_four</position>	
+	<position>frontpage</position>
+	<position>debug</position>
+	<position>syndicate</position>
+</positions>
+
+<config>
+	<fields name="params">
+		<fieldset name="basic" addfieldpath="/templates/full-screen-2/lib/php/">
+
+			<field name="width" type="text" default="95%" size="10" label="Web site width" description="Enter the width for your web site in px or % and without space. Example : 900px or 95% . Default : 95%" />
+	
+			<field name="width_content" type="text" default="980px" size="10" label="Width for the middle website : your content" description="Enter the width in px or % and without space. Example : 980px or 80% . Default : 980px" />
+			<field name="width_left" type="text" default="200px" size="10" label="Width of left column" description="Enter the width for your left column in px or % and without space. Example : 260px or 20%" />
+			<field name="width_right" type="text" default="200px" size="10" label="Width of right column" description="Enter the width for your right column in px or % and without space. Example : 260px or 20%" />
+	
+			<field name="user1_width" type="text" default="30%" size="10" label="Width of user1" description="Enter the width for user1 in px or % and without space. Example : 180px or 33% . Default : 31%" />
+			<field name="user3_width" type="text" default="30%" size="10" label="Width of user3" description="Enter the width for user3 in px or % and without space. Example : 180px or 33% . Default : 31%" />
+			<field name="user4_width" type="text" default="30%" size="10" label="Width of user4" description="Enter the width for user4 in px or % and without space. Example : 180px or 33% . Default : 31%" />
+			<field name="user6_width" type="text" default="30%" size="10" label="Width of user6" description="Enter the width for user6 in px or % and without space. Example : 180px or 33% . Default : 31%" />
+	
+	
+			<field name="height_container" type="text" default="500" size="10" label="Min height for the container" description="Enter the minimal height for the middle web site in px (only a number). Example : 500 or 350 . Default : 500" />
+			<field name="separator" type="text" default="60" size="10" label="Height above and below the header" description="Enter the height in px (only a number). Example : 40 or 60 . Default : 60" />
+	
+	
+			
+			<field name="color_link" type="color" default="#336699" label="Set the color for the active links" description="Please select the color for the links that you would like to display. Default : #336699 " />
+			
+			
+			<field name="font" type="list" default="Yanone+Kaffeesatz:200" label="Font for your menu and article title" description="">
+				<option value="Yanone+Kaffeesatz:200">Yanone 200</option>
+				<option value="JosefinSansStdLight">Josefin</option>			
+				<option value="Nobile">Nobile</option>			
+				<option value="Vollkorn">Vollkorn</option>
+			</field>
+			
+			<field name="font_content" type="list" default="Trebuchet ms" label="Font for your content" description="">
+				<option value="Trebuchet ms">Trebuchet ms</option>
+				<option value="arial">arial</option>
+				<option value="Comic sans ms">Comic sans MS</option>
+				<option value="Times new roman">Times new roman</option>
+				<option value="Verdana">Verdana</option>
+			</field>		
+	
+			<field name="fontSize" type="list" default="12px" label="Default font size" description="Set the default font size when template is loaded for the first time">
+				<option value="10px">smallest</option>
+				<option value="11px">small</option>
+				<option value="12px">normal</option>
+				<option value="13px">big</option>
+				<option value="14px">biggest</option>
+			</field>
+	
+	
+			<field name="one_slide" type="list" default="1" label="Enable slideshow" description="Choose if you want display a slideshow or only one image" >
+				<option value="1">Display a slideshow</option>
+				<option value="0">Display only one image</option>
+			</field>
+			<field name="slide_interval" type="text" default="8000" size="10" label="Slide interval" description="Enter the time for each image in millisecondes. Default : 8000" />
+			<field name="slide_transition" type="list" default="1" label="Slide transition" description="" >
+				<option value="0">None</option>
+				<option value="1">Fade</option>
+				<option value="2">Slide top</option>
+				<option value="3">Slide right</option>
+				<option value="4">Slide bottom</option>
+				<option value="5">Slide left</option>			
+			</field>
+	
+		</fieldset>
+	</fields>		
+
+</config>
+
+</install>

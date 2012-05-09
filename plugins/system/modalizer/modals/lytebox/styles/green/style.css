@@ -1,0 +1,38 @@
+#lbOverlay.green {
+	background-color: #003300;
+}
+#lbOuterContainer.green {
+	border: 2px solid #00B000;
+}
+#lbImage.green, #lbIframe.green {
+	border: 1px solid #00B000;
+}
+
+#lbPrevHov.green:hover, #lbPrevHov.green:visited {
+	background: url('images/prev_green_t.png') left 30% no-repeat;
+}
+#lbNextHov.green:hover, #lbNextHov.green:visited {
+	background: url('images/next_green_t.png') right 30% no-repeat;
+}
+#lbPrev.green, #lbPrevTop.green {
+	background: url('images/prev_green.png') no-repeat;
+}
+#lbNext.green, #lbNextTop.green {
+	background: url('images/next_green.png') no-repeat;
+}
+#lbBottomData.green, #lbTopData.green {
+	color: #003300;
+}
+
+#lbClose.green, #lbCloseTop.green {
+	background: url('images/close_green.png') no-repeat;
+}
+#lbPrint.green, #lbPrintTop.green {
+	background: url('images/print_green.png') no-repeat;
+}
+#lbPlay.green, #lbPlayTop.green {
+	background: url('images/play_green.png') no-repeat;
+}
+#lbPause.green, #lbPauseTop.green {
+	background: url('images/pause_green.png') no-repeat;
+}

@@ -1,0 +1,12 @@
+/*****************************************
+		SITE  IE8-
+******************************************/
+
+
+#supersize img, #supersize a {
+display:none;
+}
+
+#supersize .prevslide, #supersize .prevslide img, #supersize .activeslide, #supersize .activeslide img {
+display:block;
+}

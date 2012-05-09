@@ -1,0 +1,45 @@
+#lbOverlay.black {
+	background-color: #000000;
+}
+#lbOuterContainer.black {
+	border: 2px solid #CCCCCC;
+	background-color: #000000;
+}
+#lbTopContainer.black, #lbBottomContainer.black {
+	background-color: #000000;
+}
+#lbImage.black, #lbIframe.black {
+	border: 1px solid #CCCCCC;
+}
+#lbLoading.black {
+	background: url('images/loading_black.gif') center no-repeat;
+}
+
+#lbPrevHov.black:hover, #lbPrevHov.black:visited {
+	background: url('images/prev_black_t.png') left 30% no-repeat;
+}
+#lbNextHov.black:hover, #lbNextHov.black:visited {
+	background: url('images/next_black_t.png') right 30% no-repeat;
+}
+#lbPrev.black, #lbPrevTop.black {
+	background: url('images/prev_black.png') no-repeat;
+}
+#lbNext.black, #lbNextTop.black {
+	background: url('images/next_black.png') no-repeat;
+}
+#lbBottomData.black, #lbTopData.black {
+	color: #ffffff;
+}
+
+#lbClose.black, #lbCloseTop.black {
+	background: url('images/close_black.png') no-repeat;
+}
+#lbPrint.black, #lbPrintTop.black {
+	background: url('images/print_black.png') no-repeat;
+}
+#lbPlay.black, #lbPlayTop.black {
+	background: url('images/play_black.png') no-repeat;
+}
+#lbPause.black, #lbPauseTop.black {
+	background: url('images/pause_black.png') no-repeat;
+}

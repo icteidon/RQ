@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension type="component" version="1.6" method="upgrade">
+	<name>COM_SNIPPETS</name>
+	<description>COM_SNIPPETS_DESC</description>
+	<version>2.1.1FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<administration>
+		<menu img="components/com_snippets/images/icon-snippets.png">COM_SNIPPETS</menu>
+	</administration>
+
+	<!-- Installation -->
+	<uninstallfile>uninstall.snippets.php</uninstallfile>
+	<uninstall>
+		<sql>
+			<file driver="mysql" charset="utf8">uninstall.snippets.sql</file>
+		</sql>
+	</uninstall>
+</extension>

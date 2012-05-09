@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="system" version="1.6">
+	<name>PLG_SYSTEM_CONTENTTEMPLATER</name>
+	<description>PLG_SYSTEM_CONTENTTEMPLATER_DESC</description>
+	<version>3.1.0FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename plugin="contenttemplater">contenttemplater.php</filename>
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_contenttemplater" />
+				<field name="@license" type="nn_license" extension="CONTENT_TEMPLATER" />
+				<field name="@version" type="nn_version" extension="CONTENT_TEMPLATER" xml="/plugins/system/contenttemplater/contenttemplater.xml" />
+				<field name="@dependency" type="nn_dependency"
+					label="RR_THE_COMPONENT"
+					file="/administrator/components/com_contenttemplater/contenttemplater.php" />
+				<field name="@header" type="nn_header"
+					label="CONTENT_TEMPLATER"
+					description="CONTENT_TEMPLATER_DESC"
+					xml="/plugins/system/contenttemplater/contenttemplater.xml"
+					image="/plugins/system/contenttemplater/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/contenttemplater"
+					help_url="http://www.nonumber.nl/contenttemplater" />
+
+				<field name="@notice_settings" type="nn_plaintext" description="CT_SETTINGS" />
+				<field name="@notice" type="nn_plaintext" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

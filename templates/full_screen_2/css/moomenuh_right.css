@@ -1,0 +1,230 @@
+#menu_right {
+clear:both;
+display:block;
+position:relative;
+z-index:100;
+list-style: none;
+padding:0 0 0 10px;
+margin:0;
+text-align:left;
+height:35px;
+/**	change	**/
+float:left;
+padding:0;
+}
+#menu_right .moduletable{
+margin:0;
+}
+#menu_right li{
+margin:0;
+padding:0;
+float:left;
+height:35px;
+position:relative;
+list-style : none;
+/**	change	**/
+margin-right:10px;
+}
+#menu_right li a, #menu_right li span.separator {
+display:block;
+float : none !important;
+float : left;
+position:relative;
+z-index:1000;
+text-decoration:none;
+/**	change	**/
+color:#000;
+text-transform: uppercase;
+letter-spacing: 0px;
+font-weight:normal;
+font-size:20px;
+text-align:left;
+height:35px;
+line-height:32px;
+padding: 0 10px;
+}
+#menu_right li li a, #menu_right li li span.separator {
+/**	change	**/
+color:#000;
+float:none;
+font-size:15px;
+height:auto;
+line-height: 14px;
+letter-spacing: 0;
+font-weight:normal;
+padding: 6px 13px 6px 13px;
+text-transform:none;
+background-image: none;
+}
+#menu_right li li li a, #menu_right li li li span.separator{
+line-height: 14px;
+padding: 6px 13px 6px 13px;
+}
+#menu_right li ul {
+display:block;
+width: 160px;
+height:auto;
+position:absolute;
+z-index:99;
+left: -999em;
+clear:left;
+/**	change	**/
+margin-left:0;
+margin-top:-1px;
+background : transparent url(../images/white-93.png) 0 0 repeat;
+-moz-box-shadow : 0px 2px 10px #999;
+-webkit-box-shadow : 0px 2px 10px #999;
+padding:10px 0;
+}
+#menu_right li ul ul {
+margin: -10px 0 0 160px;
+/**	change	**/
+}
+
+#menu_right li li {
+width: 100%;
+height:auto;
+margin: 0 0 1px 0px;
+}
+#menu_right li li li {
+}
+#menu_right li:hover ul ul, #menu_right li:hover ul ul ul,
+#menu_right li.sfhover ul ul, #menu_right li.sfhover ul ul ul {
+left: -999em;
+}
+#menu_right li:hover ul, #menu_right li li:hover ul, #menu_right li li li:hover ul,
+#menu_right li.sfhover ul, #menu_right li li.sfhover ul, #menu_right li li li.sfhover ul {
+left: auto;
+}
+
+
+/** si est actif niveau 1 	**/
+#menu_right #current a, #menu_right #current span.separator {
+color:#336699;
+text-decoration:none;
+background: url(../images/arrow_menu_grey.png) 2px -31px no-repeat;
+}
+/** si est actif niveau 2+ 	**/
+#menu_right ul #current a, #menu_right ul #current span.separator,
+#menu_right #current ul a:hover, #menu_right #current ul span.separator:hover {
+color:#336699;
+text-decoration:none;
+background-image: none;
+}
+/** si parent actif et enfant actif **/
+#menu_right li.active li a:hover, #menu_right li li.active li a:hover, #menu_right li li li.active li a:hover, #menu_right li.active li span.separator:hover,
+#menu_right li.active li li span.separator:hover, #menu_right li.active li li a:hover {
+color:#336699;
+text-decoration:none;
+background-image: none;
+}
+/** si est parent actif niveau 1	**/
+#menu_right li.active a, #menu_right li.active span.separator {
+color:#336699;
+text-decoration:none;
+background: url(../images/arrow_menu_grey.png) 2px -31px no-repeat;
+}
+/** si est enfant de parent actif niveau 1	**/
+#menu_right li.active li a, #menu_right li.active li span.separator {
+color:#000;
+text-decoration:none;
+background-image: none;
+}
+/** si est parent actif niveau 2+	**/
+#menu_right li li.active a, #menu_right li li li.active a, #menu_right li li li li.active a,
+#menu_right li.active li.active a, #menu_right li li.active li.active a, #menu_right li li li.active li.active a,
+#menu_right li li.active span.separator, #menu_right li.active li.active span.separator{
+color:#336699;
+text-decoration:none;
+background-image: none;
+}
+/** si est survol niveau 1	**/
+#menu_right li a:hover, #menu_right li a:hover, #menu_right li.sfhover span.separator, #menu_right li.sfhover a,
+#menu_right li span.separator:hover, #menu_right li span.separator:hover, #menu_right li.sfhover span.separator {
+color:#336699;
+text-decoration:none;
+}
+/** si est survol niveau 2+	**/
+#menu_right li li a:hover, #menu_right li li li a:hover, #menu_right li li a:hover, #menu_right li li li a:hover,
+#menu_right li.active li a:hover, #menu_right li li.active li a:hover, #menu_right li li li.active li a:hover,
+#menu_right li.active li.active a:hover, #menu_right li li.active li.active a:hover, #menu_right li li li.active li.active a:hover,
+#menu_right li li span.separator:hover, #menu_right li li span.separator:hover, #menu_right li.active li span.separator:hover,
+#menu_right li li.sfhover a, #menu_right li li.sfhover span.separator, #menu_right li li li.sfhover a, #menu_right li li li.sfhover span.separator {
+color:#336699;
+text-decoration:none;
+background-image: none;
+}
+/** si courant survol niveau 1	**/
+#menu_right li.active a:hover, #menu_right li.active span.separator:hover {
+color:#336699;
+text-decoration:none;
+}
+/** si courant survol niveau 2+	**/
+#menu_right li#current li a:hover, #menu_right li#current li span.separator:hover {
+color:#336699;
+text-decoration:none;
+background-image: none;
+}
+#menu_right li a:hover, #menu_right li span.separator:hover {
+color:#336699;
+text-decoration:none;
+background: url(../images/arrow_menu_grey.png) 2px -31px no-repeat;
+}
+#menu_right #current li li a:hover, #menu_right #current li li span.separator:hover {
+color:#336699;
+text-decoration:none;
+background-image: none;
+}
+
+
+/** si est enfant **/
+#menu_right li li a, #menu_right li li li a, #menu_right li li li li a,
+#menu_right li li span.separator, #menu_right li li li span.separator, #menu_right li li li li span.separator  {
+color:#000;
+background-image: none;
+}
+/** si est parent niveau 1	**/
+#menu_right li a, #menu_right li span.separator {
+color:#000;
+text-decoration:none;
+}
+/** si est parent niveau 2+	**/
+#menu_right li li a, #menu_right li li li a, #menu_right li li li li a,
+#menu_right li li span.separator, #menu_right li li li span.separator, #menu_right li li li li span.separator {
+color:#000;
+background-image: none;
+}
+/** si parent actif et enfant non actif **/
+#menu_right li.active li a, #menu_right li li.active li a, #menu_right li li li.active li a,
+#menu_right li.active li span.separator, #menu_right li li.active li span.separator, #menu_right li li li.active li span.separator {
+color:#000;
+background-image: none;
+}
+#menu_right li.active li a, #menu_right li li.active li a, #menu_right li li li.active li a,
+#menu_right li.active li span.separator, #menu_right li li.active li span.separator, #menu_right li li li.active li span.separator {
+color: #aaa;
+background-image: none;
+}
+#menu_right li#current li a, #menu_right li#current li span.separator {
+color:#000;
+background-image: none;
+}
+#menu_right #current li a, #menu_right #current li span.separator {
+color:#000;
+}
+/**	niveau 1	**/
+#menu_right #current li a, #menu_right #current li span.separator {
+color:#000;
+}
+/**	niveau 2+	**/
+#menu_right #current li li a, #menu_right li.active li li a, #menu_right li li.active li li a, #menu_right li li li.active li li a,
+#menu_right li.active li.active li a, #menu_right li li.active li.active li a, #menu_right li li li.active li.active li a,
+#menu_right #current li li span.separator, #menu_right li.active li li span.separator, #menu_right li li.active li li span.separator, #menu_right li li li.active li li span.separator,
+#menu_right li.active li.active li span.separator, #menu_right li li.active li.active li span.separator, #menu_right li li li.active li.active li span.separator {
+color:#000;
+background-image: none;
+}
+#menu_right li:hover a, #menu_right li:hover span.separator, #menu_right li.active a, #menu_right li.active span.separator,
+#menu_right li.sfhover a, #menu_right li.sfhover span.separator {
+color:#336699;
+}

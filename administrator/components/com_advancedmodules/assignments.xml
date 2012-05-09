@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/plugins/system/nnframework/fields">
+	<fieldset name="color">
+		<field name="color" type="nn_colorpicker" default="FFFFFF" label="AMM_COLOR" description="AMM_COLOR_DESC" />
+	</fieldset>
+
+	<fieldset name="hideempty">
+		<field name="hideempty" type="radio" default="0" label="AMM_HIDE_IF_EMPTY" description="AMM_HIDE_IF_EMPTY_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+	</fieldset>
+
+
+	<fieldset name="mirror_module">
+		<field name="mirror_module" type="radio" default="0" label="AMM_MIRROR_MODULE" description="AMM_MIRROR_MODULE_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">AMM_REVERSE</option>
+		</field>
+		<field name="@toggler_mirror_a" type="nn_toggler" param="mirror_module" value="1,2" />
+		<field name="mirror_moduleid" type="nn_modules" size="1" showid="1" showtype="1" default="" label="AMM_MODULE" description="AMM_MODULE_DESC" />
+		<field name="@toggler_mirror_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="match_method">
+		<field name="match_method" type="radio" default="and" label="NN_MATCHING_METHOD" description="NN_MATCHING_METHOD_DESC">
+			<option value="and">NN_AND</option>
+			<option value="or">NN_OR</option>
+		</field>
+		<field name="@toggler_match_1a" type="nn_toggler" param="match_method" value="and" />
+		<field name="@block_and" type="nn_block" description="NN_AND_DESC" />
+		<field name="@toggler_match_1b" type="nn_toggler" />
+		<field name="@toggler_match_2a" type="nn_toggler" param="match_method" value="or" />
+		<field name="@block_or" type="nn_block" description="NN_OR_DESC" />
+		<field name="@toggler_match_2b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="show_ignores">
+		<field name="show_ignores" type="radio" default="2" label="NN_IGNORES" description="NN_IGNORES_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+			<option value="2">NN_USE_DEFAULT</option>
+		</field>
+		<field name="@toggler_ignores_1a" type="nn_toggler" param="show_ignores" value="-1,0" />
+		<field name="@block_ignores" type="nn_block" description="NN_IGNORES_HIDE_DESC" />
+		<field name="@toggler_ignores_1b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_menuitems">
+		<field name="@toggler_menuitems_a" type="nn_toggler" param="show_ignores|assignto_menuitems" value="1,2|1,21,2" />
+		<field name="@block_menuitems_a" type="nn_block" start="1" label="NN_MENU_ITEMS" />
+		<field name="assignto_menuitems" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_menuitems_1a" type="nn_toggler" param="assignto_menuitems" value="1,2" />
+		<field name="assignto_menuitems_selection" type="nn_menuitems" selectablemenus="1" default="" label="NN_MENU_ITEMS" description="NN_MENU_ITEMS_DESC" />
+		<field name="assignto_menuitems_inc_children" type="radio" default="0" label="NN_ALSO_ON_CHILD_ITEMS" description="NN_ALSO_ON_CHILD_ITEMS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">NN_ONLY</option>
+		</field>
+		<field name="assignto_menuitems_inc_noitemid" type="radio" default="0" label="NN_INCLUDE_NO_ITEMID" description="NN_INCLUDE_NO_ITEMID_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@toggler_menuitems_1b" type="nn_toggler" />
+		<field name="@block_menuitems_b" type="nn_block" end="1" />
+		<field name="@toggler_menuitems_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_homepage">
+		<field name="@toggler_homepage_a" type="nn_toggler" param="show_ignores|assignto_homepage" value="1,2|1,2" />
+		<field name="@block_homepage_a" type="nn_block" start="1" label="NN_HOME_PAGE" />
+		<field name="assignto_homepage" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_YES_NO_DESC">
+			<option value="1">JYES</option>
+			<option value="2">JNO</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_homepage_1a" type="nn_toggler" param="assignto_homepage" value="1,2" />
+		<field name="@block_homepage" type="nn_block" description="NN_HOME_PAGE_DESC" />
+		<field name="@toggler_homepage_1b" type="nn_toggler" />
+		<field name="@block_homepage_b" type="nn_block" end="1" />
+		<field name="@toggler_homepage_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_content">
+		<field name="@toggler_content_a" type="nn_toggler" param="show_ignores|assignto_cats|assignto_articles" value="1,2|1,2|1,2" />
+		<field name="@block_content_a" type="nn_block" start="1" label="NN_JCONTENT" />
+		<field name="@toggler_cats_a" type="nn_toggler" param="show_ignores|assignto_cats" value="1,2|1,2" />
+		<field name="@block_cats_a" type="nn_block" start="1" label="NN_CATEGORIES" />
+		<field name="assignto_cats" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_cats_1a" type="nn_toggler" param="assignto_cats" value="1,2" />
+		<field name="assignto_cats_inc" type="nn_checkbox" default="inc_cats,inc_arts" label="NN_PAGE_TYPES" description="NN_PAGE_TYPES_DESC">
+			<option value="inc_cats">NN_CATEGORIES</option>
+			<option value="inc_arts">NN_ARTICLES</option>
+			<option value="inc_others">NN_OTHERS</option>
+		</field>
+		<field name="assignto_cats_selection" type="nn_cats" multiple="1" default="" label="NN_CATEGORIES" description="NN_CATEGORIES_DESC" />
+		<field name="assignto_cats_inc_children" type="radio" default="0" label="NN_ALSO_ON_CHILD_ITEMS" description="NN_ALSO_ON_CHILD_ITEMS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+			<option value="2">NN_ONLY</option>
+		</field>
+		<field name="@toggler_cats_1b" type="nn_toggler" />
+		<field name="@block_cats_b" type="nn_block" end="1" />
+		<field name="@toggler_cats_b" type="nn_toggler" />
+
+		<field name="@toggler_articles_a" type="nn_toggler" param="show_ignores|assignto_articles" value="1,2|1,2" />
+		<field name="@block_articles_a" type="nn_block" start="1" label="NN_ARTICLES" />
+		<field name="assignto_articles" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_articles_1a" type="nn_toggler" param="assignto_articles" value="1,2" />
+		<field name="assignto_articles_selection" type="nn_articles" multiple="1" default="" label="NN_ARTICLE_IDS" description="NN_ARTICLE_IDS_DESC" />
+		<field name="assignto_articles_keywords" type="nn_textareaplus" texttype="regex" default="" label="NN_ARTICLE_KEYWORDS" description="NN_ARTICLE_KEYWORDS_DESC" />
+		<field name="@toggler_articles_1b" type="nn_toggler" />
+		<field name="@block_articles_b" type="nn_block" end="1" />
+		<field name="@toggler_articles_b" type="nn_toggler" />
+		<field name="@block_content_b" type="nn_block" end="1" />
+		<field name="@toggler_content_b" type="nn_toggler" />
+	</fieldset>
+
+
+	<fieldset name="assignto_components">
+		<field name="@toggler_components_a" type="nn_toggler" param="show_ignores|assignto_components" value="1,2|1,2" />
+		<field name="@block_components_a" type="nn_block" start="1" label="NN_COMPONENTS" />
+		<field name="assignto_components" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_components_1a" type="nn_toggler" param="assignto_components" value="1,2" />
+		<field name="assignto_components_selection" type="nn_components" admin="0" show_content="1" default="" label="NN_COMPONENTS" description="NN_COMPONENTS_DESC" />
+		<field name="@toggler_components_1b" type="nn_toggler" />
+		<field name="@block_components_b" type="nn_block" end="1" />
+		<field name="@toggler_components_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_urls">
+		<field name="@toggler_urls_a" type="nn_toggler" param="show_ignores|assignto_urls" value="1,2|1,2" />
+		<field name="@block_urls_a" type="nn_block" start="1" label="NN_URL" />
+		<field name="assignto_urls" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_urls_1a" type="nn_toggler" param="assignto_urls" value="1,2" />
+		<field name="@toggler_urls_sef_1a" type="nn_toggler" param="use_sef" value="0" />
+		<field name="show_url_field_sef" type="radio" default="0" label="NN_SHOW_URL_FIELD_SEF" description="NN_SHOW_URL_FIELD_SEF_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@toggler_urls_sef_1b" type="nn_toggler" />
+		<field name="@toggler_urls_sef_2a" type="nn_toggler" param="use_sef|show_url_field_sef" value="1,2|1" />
+		<field name="assignto_urls_selection_sef" type="nn_textareaplus" texttype="regex" default="" label="NN_URL_PARTS_SEF" description="NN_URL_PARTS_SEF_DESC" />
+		<field name="@toggler_urls_sef_2b" type="nn_toggler" />
+
+		<field name="@toggler_urls_sef_3a" type="nn_toggler" param="use_sef" value="1" />
+		<field name="show_url_field" type="radio" default="0" label="NN_SHOW_URL_FIELD" description="NN_SHOW_URL_FIELD_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@toggler_urls_sef_3b" type="nn_toggler" />
+		<field name="@toggler_urls_sef_4a" type="nn_toggler" param="use_sef|show_url_field" value="0,2|1" />
+		<field name="assignto_urls_selection" type="nn_textareaplus" texttype="regex" default="" label="NN_URL_PARTS_NON_SEF" description="NN_URL_PARTS_NON_SEF_DESC" />
+		<field name="@toggler_urls_sef_4b" type="nn_toggler" />
+
+		<field name="@block_urls" type="nn_block" description="NN_URL_PARTS_DESC" />
+		<field name="@toggler_urls_1b" type="nn_toggler" />
+		<field name="@block_urls_b" type="nn_block" end="1" />
+		<field name="@toggler_urls_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_browsers">
+		<field name="@toggler_browsers_a" type="nn_toggler" param="show_ignores|assignto_browsers" value="1,2|1,2" />
+		<field name="@block_browsers_a" type="nn_block" start="1" label="NN_BROWSERS" />
+		<field name="assignto_browsers" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_browsers_1a" type="nn_toggler" param="assignto_browsers" value="1,2" />
+		<field name="@block_browsers" type="nn_block" description="NN_BROWSERS_DESC" />
+		<field name="assignto_browsers_selection" type="nn_browsers" default="" label="NN_BROWSERS" description="NN_BROWSERS_DESC" />
+		<field name="@toggler_browsers_1b" type="nn_toggler" />
+		<field name="@block_browsers_b" type="nn_block" end="1" />
+		<field name="@toggler_browsers_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_date">
+		<field name="@toggler_group_date_a" type="nn_toggler" param="show_ignores|assignto_date|assignto_seasons|assignto_months|assignto_days|assignto_time" value="1,2|1,2|1,2|1,2|1,2|1,2" />
+		<field name="@block_group_date_a" type="nn_block" start="1" label="NN_DATE_TIME" />
+		<field name="@block_group_date_1" type="nn_block" nostyle="1" description="NN_DATE_TIME_DESC" />
+		<field name="@block_group_date_2" type="nn_datetime" format="%Y-%m-%d %H:%M" label="NN_CURRENT_DATE" />
+
+		<field name="@toggler_date_a" type="nn_toggler" param="show_ignores|assignto_date" value="1,2|1,2" />
+		<field name="@block_date_a" type="nn_block" start="1" label="NN_DATE" />
+		<field name="assignto_date" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_date_1a" type="nn_toggler" param="assignto_date" value="1,2" />
+		<field name="assignto_date_publish_up" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_START_PUBLISHING" description="NN_START_PUBLISHING_DESC" />
+		<field name="assignto_date_publish_down" type="calendar" format="%Y-%m-%d 00:00" default="0000-00-00 00:00" label="NN_FINISH_PUBLISHING" description="NN_FINISH_PUBLISHING_DESC" />
+		<field name="@toggler_date_1b" type="nn_toggler" />
+		<field name="@block_date_b" type="nn_block" end="1" />
+		<field name="@toggler_date_b" type="nn_toggler" />
+
+
+		<field name="@block_group_date_b" type="nn_block" end="1" />
+		<field name="@toggler_group_date_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_users_open">
+		<field name="@block_group_users_a" type="nn_block" start="1" label="NN_USERS" />
+	</fieldset>
+	<fieldset name="assignto_users_close">
+		<field name="@block_group_users_b" type="nn_block" end="1" />
+	</fieldset>
+
+	<fieldset name="assignto_usergrouplevels">
+		<field name="@toggler_usergrouplevels_a" type="nn_toggler" param="show_ignores|assignto_usergrouplevels" value="1,2|1,2" />
+		<field name="@block_usergrouplevels_a" type="nn_block" start="1" label="NN_USER_GROUP_LEVELS" />
+		<field name="assignto_usergrouplevels" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_usergrouplevels_1a" type="nn_toggler" param="assignto_usergrouplevels" value="1,2" />
+		<field name="assignto_usergrouplevels_selection" type="nn_grouplevel" multiple="1" notregistered="1" default="" label="NN_USER_GROUPS" description="NN_USER_GROUPS_DESC" />
+		<field name="@toggler_usergrouplevels_1b" type="nn_toggler" />
+		<field name="@block_usergrouplevels_b" type="nn_block" end="1" />
+		<field name="@toggler_usergrouplevels_b" type="nn_toggler" />
+	</fieldset>
+
+
+	<fieldset name="assignto_languages">
+		<field name="@toggler_languages_a" type="nn_toggler" param="show_ignores|assignto_languages" value="1,2|1,2" />
+		<field name="@block_languages_a" type="nn_block" start="1" label="NN_LANGUAGES" />
+		<field name="assignto_languages" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_languages_1a" type="nn_toggler" param="assignto_languages" value="1,2" />
+		<field name="assignto_languages_selection" type="nn_languages" multiple="1" default="" label="NN_LANGUAGES" description="NN_LANGUAGES_DESC" />
+		<field name="@toggler_languages_1b" type="nn_toggler" />
+		<field name="@block_languages_b" type="nn_block" end="1" />
+		<field name="@toggler_languages_b" type="nn_toggler" />
+	</fieldset>
+
+	<fieldset name="assignto_templates">
+		<field name="@toggler_templates_a" type="nn_toggler" param="show_ignores|assignto_templates" value="1,2|1,2" />
+		<field name="@block_templates_a" type="nn_block" start="1" label="NN_TEMPLATES" />
+		<field name="assignto_templates" type="radio" default="0" label="NN_ASSIGN_TO" description="NN_ASSIGN_TO_DESC">
+			<option value="1">NN_SELECTION</option>
+			<option value="2">NN_EXCLUDE_SELECTION</option>
+			<option value="0">NN_IGNORE</option>
+		</field>
+		<field name="@toggler_templates_1a" type="nn_toggler" param="assignto_templates" value="1,2" />
+		<field name="assignto_templates_selection" type="nn_templates" multiple="1" subtemplates="0" show_system="0" default="" label="NN_TEMPLATES" description="NN_TEMPLATES_DESC" />
+		<field name="@toggler_templates_1b" type="nn_toggler" />
+		<field name="@block_templates_b" type="nn_block" end="1" />
+		<field name="@toggler_templates_b" type="nn_toggler" />
+	</fieldset>
+
+</config>

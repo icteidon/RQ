@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="system" version="1.6">
+	<name>PLG_SYSTEM_ADMINBARDOCKER</name>
+	<description>PLG_SYSTEM_ADMINBARDOCKER_DESC</description>
+	<version>2.1.0FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="adminbardocker">adminbardocker.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+		<folder>js</folder>
+		<folder>templates</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_adminbardocker" />
+				<field name="@license" type="nn_license" extension="ADMINBAR_DOCKER" />
+				<field name="@version" type="nn_version" extension="ADMINBAR_DOCKER" xml="/plugins/system/adminbardocker/adminbardocker.xml" />
+				<field name="@header" type="nn_header"
+					label="ADMINBAR_DOCKER"
+					description="ADMINBAR_DOCKER_DESC"
+					xml="/plugins/system/adminbardocker/adminbardocker.xml"
+					image="/plugins/system/adminbardocker/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/adminbardocker"
+					help_url="http://www.nonumber.nl/adminbardocker" />
+
+				<field name="dock_state" type="radio" default="docked" label="ABD_DEFAULT_STATE" description="ABD_DEFAULT_STATE_DESC">
+					<option value="docked">ABD_DOCK</option>
+					<option value="undocked">ABD_UNDOCK</option>
+				</field>
+				<field name="@notice_dock_pos" type="nn_plaintext" label="ABD_DEFAULT_POSITION" description="ABD_DEFAULT_POSITION_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@notice_autohide" type="nn_plaintext" label="ABD_DEFAULT_AUTO_HIDE" description="ABD_DEFAULT_AUTO_HIDE_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+				<field name="showonpopups" type="radio" default="0" label="ABD_SHOW_ON_ADMIN_POPUPS" description="ABD_SHOW_ON_ADMIN_POPUPS_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+					<option value="2">ABD_YES_BUT_DOCKED</option>
+				</field>
+				<field name="hidetopbar" type="radio" default="0" label="ABD_HIDE_TOP_BAR" description="ABD_HIDE_TOP_BAR_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@notice_iconset" type="nn_plaintext" label="ABD_ICON_SET" description="ABD_ICON_SET_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

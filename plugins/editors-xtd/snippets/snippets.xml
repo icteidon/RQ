@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="system" version="1.6">
+	<name>PLG_EDITORS-XTD_SNIPPETS</name>
+	<description>PLG_EDITORS-XTD_SNIPPETS_DESC</description>
+	<version>2.1.1FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="editorbuttons">snippets.php</filename>
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="plg_editors-xtd_snippets" />
+				<field name="@license" type="nn_license" extension="SNIPPETS" />
+				<field name="@version" type="nn_version" extension="SNIPPETS" xml="/plugins/editors-xtd/snippets/snippets.xml" />
+				<field name="@dependency" type="nn_dependency"
+					label="SNP_THE_COMPONENT"
+					file="/administrator/components/com_snippets/snippets.php" />
+				<field name="@dependency" type="nn_dependency"
+					label="SNP_THE_SYSTEM_PLUGIN"
+					file="/plugins/system/snippets/snippets.php" />
+				<field name="@header" type="nn_header"
+					label="SNIPPETS"
+					description="SNIPPETS_DESC"
+					xml="/plugins/editors-xtd/snippets/snippets.xml"
+					image="/plugins/editors-xtd/snippets/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/snippets"
+					help_url="http://www.nonumber.nl/snippets" />
+
+				<field name="@notice_settings" type="nn_plaintext" description="SNP_SETTINGS" />
+				<field name="@notice" type="nn_plaintext" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

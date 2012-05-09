@@ -1,0 +1,38 @@
+#lbOverlay.gold {
+	background-color: #666600;
+}
+#lbOuterContainer.gold {
+	border: 2px solid #B0B000;
+}
+#lbImage.gold, #lbIframe.gold {
+	border: 1px solid #B0B000;
+}
+
+#lbPrevHov.gold:hover, #lbPrevHov.gold:visited {
+	background: url('images/prev_gold_t.png') left 30% no-repeat;
+}
+#lbNextHov.gold:hover, #lbNextHov.gold:visited {
+	background: url('images/next_gold_t.png') right 30% no-repeat;
+}
+#lbPrev.gold, #lbPrevTop.gold {
+	background: url('images/prev_gold.png') no-repeat;
+}
+#lbNext.gold, #lbNextTop.gold {
+	background: url('images/next_gold.png') no-repeat;
+}
+#lbBottomData.gold, #lbTopData.gold {
+	color: #666600;
+}
+
+#lbClose.gold, #lbCloseTop.gold {
+	background: url('images/close_gold.png') no-repeat;
+}
+#lbPrint.gold, #lbPrintTop.gold {
+	background: url('images/print_gold.png') no-repeat;
+}
+#lbPlay.gold, #lbPlayTop.gold {
+	background: url('images/play_gold.png') no-repeat;
+}
+#lbPause.gold, #lbPauseTop.gold {
+	background: url('images/pause_gold.png') no-repeat;
+}

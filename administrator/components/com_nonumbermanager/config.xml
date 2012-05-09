@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/plugins/system/nnframework/fields">
+	<fieldset name="options" label="JOPTIONS">
+		<field name="@loadlanguage" type="nn_loadlanguage" extension="com_nonumbermanager" />
+		<field name="@block_key_a" type="nn_block" start="1" label="NNEM_DOWNLOAD_KEY" description="NNEM_DOWNLOAD_KEY_DESC" />
+		<field name="key" type="password"
+			autocomplete="off"
+			filter="raw"
+			class="nn_codefield"
+			label="NNEM_DOWNLOAD_KEY"
+			/>
+		<field name="@block_key_b" type="nn_block" end="1" />
+		<field name="@block_default_a" type="nn_block" start="1" label="JDEFAULT" />
+		<field name="check_data" type="radio" default="1" label="NNEM_CHECK_DATA" description="NNEM_CHECK_DATA_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@notice_hide_notinstalled" type="nn_plaintext" label="NNEM_HIDE_NOTINSTALLED" description="NNEM_HIDE_NOTINSTALLED_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<field name="use_proxy" type="radio" default="0" label="NNEM_USE_PROXY" description="NNEM_USE_PROXY_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@toggler_proxy_a" type="nn_toggler" param="use_proxy" value="1" />
+		<field name="@block_proxy_a" type="nn_block" start="1" label="NNEM_PROXY" />
+		<field name="proxy_host" type="text" size="40" default="" label="NNEM_PROXY_HOST" description="NNEM_PROXY_HOST_DESC" />
+		<field name="proxy_port" type="text" size="40" default="" label="NNEM_PROXY_PORT" description="NNEM_PROXY_PORT_DESC" />
+		<field name="proxy_login" type="text" size="40" default="" label="NNEM_PROXY_LOGIN" description="NNEM_PROXY_LOGIN_DESC" />
+		<field name="proxy_password" type="text" size="40" default="" label="NNEM_PROXY_PASSWORD" description="NNEM_PROXY_PASSWORD_DESC" />
+		<field name="@block_proxy_b" type="nn_block" end="1" />
+		<field name="@toggler_proxy_b" type="nn_toggler" />
+		<field name="@block_default_b" type="nn_block" end="1" />
+	</fieldset>
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" filter="rules" validate="rules" component="com_nonumbermanager" section="component" label="JCONFIG_PERMISSIONS_LABEL">
+			<action name="core.admin" title="JACTION_ADMIN" description="JACTION_ADMIN_COMPONENT_DESC" />
+			<action name="core.manage" title="JACTION_MANAGE" description="JACTION_MANAGE_COMPONENT_DESC" />
+		</field>
+	</fieldset>
+</config>

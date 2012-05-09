@@ -1,0 +1,111 @@
+/**
+ * NoNumber Extension Manager Admin CSS
+ *
+ * @package			NoNumber Extension Manager
+ * @version			3.1.1
+ *
+ * @author			Peter van Westen <peter@nonumber.nl>
+ * @link			http://www.nonumber.nl
+ * @copyright		Copyright © 2012 NoNumber All Rights Reserved
+ * @license			http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+table.processlist {
+	border-spacing: 0;
+	color: #666666;
+	width: 1%;
+	margin: 0 auto;
+}
+table.processlist td {
+	padding: 1px;
+}
+table.processlist td.ext_name {
+	font-size: 18px;
+}
+table.processlist td.statuses {
+	padding-left: 10px;
+}
+
+div.title {
+	text-align: center;
+}
+div.title h1,
+a.nonumbermanager_button {
+	margin: 0 0 20px;
+	padding: 5px 10px;
+	font-size: 20px;
+}
+
+a.nonumbermanager_button {
+	padding: 5px 40px;
+	vertical-align: text-bottom;
+	display: block;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	text-align: center;
+	border: none;
+	background-color: #5EA62A;
+	-webkit-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+a.nonumbermanager_button,
+a.nonumbermanager_button:link,
+a.nonumbermanager_button:visited,
+a.nonumbermanager_button:hover {
+	font-weight: bold;
+	text-decoration: none;
+	color: #FFFFFF;
+}
+a.nonumbermanager_button:hover {
+	-webkit-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(82, 122, 204, 0.6);
+	-moz-box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(82, 122, 204, 0.6);
+	box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(82, 122, 204, 0.6);
+}
+.failed a.nonumbermanager_button {
+	background-color: #F2783E;
+}
+div.status {
+	width: 140px;
+	height: 17px;
+	padding: 3px 6px 0;
+	border: 2px solid #F2783E;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	color: #333333;
+	font-weight: bold;
+}
+div.status span {
+	display: block;
+}
+div.status progress {
+	width: 139px;
+	height: 9px;
+	margin: 1px 0;
+}
+div.status.queued {
+	border-color: #F2783E;
+}
+div.status.processing {
+	border-color: #527ACC;
+}
+div.status.success {
+	border-color: #5EA62A;
+}
+div.status.failed {
+	border-color: #C7463C;
+}
+
+div.nnem_message {
+	position: absolute;
+	top: 40px;
+	margin: 0 -10px;
+	padding-bottom: 1px;
+	width: 100%;
+	text-align: center;
+	font-weight: bold;
+	background-color: #F2783E;
+	color: #FFFFFF;
+}

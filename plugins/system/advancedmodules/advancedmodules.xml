@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="system" version="1.6">
+	<name>PLG_SYSTEM_ADVANCEDMODULES</name>
+	<description>PLG_SYSTEM_ADVANCEDMODULES_DESC</description>
+	<version>3.1.0FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="advancedmodules">advancedmodules.php</filename>
+		<filename>helper.php</filename>
+		<filename>modulehelper.php</filename>
+		<filename>index.html</filename>
+		<folder>images</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_advancedmodules" />
+				<field name="@license" type="nn_license" extension="ADVANCED_MODULE_MANAGER" />
+				<field name="@version" type="nn_version" extension="ADVANCED_MODULE_MANAGER" xml="/plugins/system/advancedmodules/advancedmodules.xml" />
+				<field name="@dependency" type="nn_dependency"
+					label="AMM_THE_COMPONENT"
+					file="/administrator/components/com_advancedmodules/advancedmodules.php" />
+				<field name="@header" type="nn_header"
+					label="ADVANCED_MODULE_MANAGER"
+					description="ADVANCED_MODULE_MANAGER_DESC"
+					xml="/plugins/system/advancedmodules/advancedmodules.xml"
+					image="/plugins/system/advancedmodules/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/advancedmodulemanager"
+					help_url="http://www.nonumber.nl/advancedmodulemanager" />
+
+				<field name="@notice_settings" type="nn_plaintext" description="AMM_SETTINGS" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

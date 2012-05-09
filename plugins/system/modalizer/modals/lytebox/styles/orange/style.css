@@ -1,0 +1,38 @@
+#lbOverlay.orange {
+	background-color: #FFBB48;
+}
+#lbOuterContainer.orange {
+	border: 2px solid #D15211;
+}
+#lbImage.orange, #lbIframe.orange {
+	border: 1px solid #D15211;
+}
+
+#lbPrevHov.orange:hover, #lbPrevHov.orange:visited {
+	background: url('images/prev_orange_t.png') left 30% no-repeat;
+}
+#lbNextHov.orange:hover, #lbNextHov.orange:visited {
+	background: url('images/next_orange_t.png') right 30% no-repeat;
+}
+#lbPrev.orange, #lbPrevTop.orange {
+	background: url('images/prev_orange.png') no-repeat;
+}
+#lbNext.orange, #lbNextTop.orange {
+	background: url('images/next_orange.png') no-repeat;
+}
+#lbBottomData.orange, #lbTopData.orange {
+	color: #D15211;
+}
+
+#lbClose.orange, #lbCloseTop.orange {
+	background: url('images/close_orange.png') no-repeat;
+}
+#lbPrint.orange, #lbPrintTop.orange {
+	background: url('images/print_orange.png') no-repeat;
+}
+#lbPlay.orange, #lbPlayTop.orange {
+	background: url('images/play_orange.png') no-repeat;
+}
+#lbPause.orange, #lbPauseTop.orange {
+	background: url('images/pause_orange.png') no-repeat;
+}

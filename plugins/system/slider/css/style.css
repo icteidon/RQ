@@ -1,0 +1,267 @@
+/**
+ * NoNumber Page stylesheet
+ *
+ * @package			Slider
+ * @version			2.1.0
+ *
+ * @author			Peter van Westen <peter@nonumber.nl>
+ * @link			http://www.nonumber.nl
+ * @copyright		Copyright © 2012 NoNumber All Rights Reserved
+ * @license			http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+div.slider_slide {
+	display: block;
+	clear: left;
+	margin: 2px 0 0 0 !important;
+	padding: 0;
+	line-height: 1em;
+	background: none;
+}
+
+div.slider_slide.slider_slide.active {
+
+}
+
+/* Slides */
+div.slider_slide a,
+div.slider_slide a:link,
+div.slider_slide a:visited,
+div.slider_slide a:active,
+div.slider_slide a:hover {
+	color: #666666;
+	outline: 0;
+	text-decoration: none;
+}
+
+div.slider_slide a,
+div.slider_slide a:hover {
+	display: block;
+	width: auto;
+	_width: 0%; /* IE hack */
+	font-size: 14px;
+	line-height: 1em !important;
+	font-weight: bold;
+	border: solid 1px #B4B4B4;
+	background: transparent url(../images/gradient.png) repeat-x 0 -100px;
+	text-decoration: none !important;
+	/* for dynamic height titles */
+	padding: 5px 10px;
+	/* for fixed height titles */
+	/*padding: 5px 10px 0 10px;
+	height: 20px;
+	_height: 25px;
+	white-space: nowrap;*/
+}
+
+div.slider_container.rounded div.slider_slide a,
+div.slider_container.rounded div.slider_slide a:hover {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/* Slides: Hover state */
+div.slider_slide a:hover {
+	color: #333333;
+	background-color: #80BCFF; /* 50% white */
+}
+
+/* Slides: Active state */
+div.slider_slide.active a,
+div.slider_slide.active a:hover {
+	color: #FFFFFF;
+	background-color: #0078FF;
+}
+
+div.slider_container.rounded div.slider_slide.active a,
+div.slider_container.rounded div.slider_slide.active a:hover {
+	-webkit-border-radius: 10px 10px 0 0;
+	-moz-border-radius: 10px 10px 0 0;
+	border-radius: 10px 10px 0 0;
+}
+
+/* Content area */
+div.slider_content_wrapper,
+div.slider_content_wrapper > div,
+div.slider_content_wrapper div.slider_content,
+div.slider_content_wrapper div.slider_content > div,
+div.slider_content_wrapper div.slider_item {
+	position: relative !important;
+	overflow: hidden !important;
+}
+
+div.slider_content_wrapper {
+	clear: left;
+	margin-top: -1px;
+	padding: 0;
+}
+
+div.slider_content_wrapper div.slider_content {
+	clear: both;
+	padding: 0;
+	border: 1px solid #B4B4B4;
+}
+
+div.slider_container.rounded div.slider_content_wrapper div.slider_content {
+	-webkit-border-radius: 0 0 10px 10px;
+	-moz-border-radius: 0 0 10px 10px;
+	border-radius: 0 0 10px 10px;
+}
+
+div.slider_content_wrapper div.slider_item {
+	padding: 10px 20px;
+}
+
+/* INDENTING */
+div.slider_slide.noindent,
+div.slider_slide.indentcontent {
+	/* default */
+}
+
+div.slider_slide.indent,
+div.slider_slide.indenttitle {
+	padding: 0 10px;
+}
+
+div.slider_slide.noindent.active a,
+div.slider_slide.noindent.active a:hover,
+div.slider_slide.indenttitle.active a,
+div.slider_slide.indenttitle.active a:hover {
+	/* default */
+}
+
+div.slider_container.rounded div.slider_slide.indentcontent.active a,
+div.slider_container.rounded div.slider_slide.indentcontent.active a:hover {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+div.slider_content_wrapper.noindent,
+div.slider_content_wrapper.indenttitle {
+	/* default */
+}
+
+div.slider_content_wrapper.indent,
+div.slider_content_wrapper.indentcontent {
+	padding: 0 10px;
+}
+
+div.slider_content_wrapper.noindent div.slider_content,
+div.slider_content_wrapper.indentcontent div.slider_content {
+	/* default */
+}
+
+div.slider_container.rounded div.slider_content_wrapper.indenttitle div.slider_content {
+	-webkit-border-radius: 10px;
+	-moz-border-radius: 10px;
+	border-radius: 10px;
+}
+
+/* STYLING FOR IF JAVASCRIPT FAILS */
+div.slider_noscript div.slider_content,
+div.slider_noscript div.slider_item {
+	margin: 0;
+	padding: 0;
+	border: none;
+}
+
+/* EXTRA STYLING
+ * If you want to change styles, it's best to place your custom (overriding) styles in the templates stylesheet,
+ * so they do not get overwritten when updating Slider.
+ */
+
+/* Style: blue */
+/* Slides: Normal state */
+div.slider_slide.blue a {
+	background-color: #BFDDFF; /* 75% white */
+}
+
+/* Slides: Hover state */
+div.slider_slide.blue a:hover {
+	background-color: #80BCFF; /* 50% white */
+}
+
+/* Slides: Active state */
+div.slider_slide.active.blue a,
+div.slider_slide.active.blue a:hover {
+	background-color: #0078FF;
+}
+
+/* Content area */
+div.slider_content.blue {
+	/*background-color: #BFDDFF;*/
+}
+
+/* Style: green */
+/* Slides: Normal state */
+div.slider_slide.green a {
+	background-color: #BFE5C0; /* 75% white */
+}
+
+/* Slides: Hover state */
+div.slider_slide.green a:hover {
+	background-color: #80CC82; /* 50% white */
+}
+
+/* Slides: Active state */
+div.slider_slide.active.green a,
+div.slider_slide.active.green a:hover {
+	background-color: #009905;
+}
+
+/* Content area */
+div.slider_content.green {
+	/*background-color: #BFE5C0;*/
+}
+
+/* Style: grey */
+/* Slides: Normal state */
+div.slider_slide.grey a {
+	background-color: #D9D9D9; /* 75% white */
+}
+
+/* Slides: Hover state */
+div.slider_slide.grey a:hover {
+	background-color: #B3B3B3; /* 50% white */
+}
+
+/* Slides: Active state */
+div.slider_slide.active.grey a,
+div.slider_slide.active.grey a:hover {
+	background-color: #666666;
+}
+
+/* Content area */
+div.slider_content.grey {
+	/*background-color: #D9D9D9;*/
+}
+
+/* Style: mystyle */
+/* This is an example of how you can make your own style
+ * You can add styles as you like
+ * You can use css to style the Tabber elements how you want it.
+ * It's best to place your custom (overriding) styles in your templates stylesheet (css file),
+ * so they do not get overwritten when you update this extension.
+ */
+/* Slides: Normal state */
+div.slider_slide.mystyle a {
+	background-color: #123456;
+}
+
+/* Slides: Hover state */
+div.slider_slide.mystyle a:hover {
+	background-color: #ABCDEF;
+}
+
+/* Slides: Active state */
+div.slider_slide.active.mystyle a,
+div.slider_slide.active.mystyle a:hover {
+	background-color: #456789;
+}
+
+/* Content area */
+div.slider_content.mystyle {
+	background-color: #CCDDEE;
+}

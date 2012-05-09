@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/plugins/system/nnframework/fields">
+	<fieldset name="options" label="JOPTIONS">
+		<field name="@loadlanguage" type="nn_loadlanguage" extension="com_snippets" />
+
+		<field name="@block_button_a" type="nn_block" start="1" label="NN_SETTINGS_EDITOR_BUTTON" />
+		<field name="@notice_button" type="nn_plaintext" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<field name="@block_button_b" type="nn_block" end="1" />
+
+		<field name="@block_other_a" type="nn_block" start="1" label="NN_OTHER_SETTINGS" />
+		<field name="tag" type="text" default="snippet" label="SNP_SNIPPET_TAG" description="SNP_SNIPPET_TAG_DESC" />
+		<field name="place_comments" type="radio" default="1" label="NN_PLACE_HTML_COMMENTS" description="NN_PLACE_HTML_COMMENTS_DESC">
+			<option value="0">JNO</option>
+			<option value="1">JYES</option>
+		</field>
+		<field name="@block_other_b" type="nn_block" end="1" />
+	</fieldset>
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" validate="rules"
+			component="com_snippets" section="component" />
+	</fieldset>
+</config>

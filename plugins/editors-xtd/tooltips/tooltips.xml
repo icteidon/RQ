@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE install SYSTEM "http://www.joomla.org/xml/dtd/1.5/plugin-install.dtd">
+<install type="plugin" group="editors-xtd" version="1.5">
+	<name>PLG_EDITORS-XTD_TOOLTIPS</name>
+	<description>PLG_EDITORS-XTD_TOOLTIPS_DESC</description>
+	<version>2.1.0FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="tooltips">tooltips.php</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>css</folder>
+		<folder>images</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="plg_editors-xtd_tooltips" />
+				<field name="@license" type="nn_license" extension="TOOLTIPS" />
+				<field name="@version" type="nn_version" extension="TOOLTIPS" xml="/plugins/editors-xtd/tooltips/tooltips.xml" />
+				<field name="@dependency" type="nn_dependency"
+					label="TT_THE_SYSTEM_PLUGIN"
+					file="/plugins/system/tooltips/tooltips.php" />
+				<field name="@header" type="nn_header"
+					label="TOOLTIPS"
+					description="TOOLTIPS_DESC"
+					xml="/plugins/editors-xtd/tooltips/tooltips.xml"
+					image="/plugins/editors-xtd/tooltips/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/tooltips"
+					help_url="http://www.nonumber.nl/tooltips" />
+
+				<field name="@notice_settings" type="nn_plaintext" description="TT_SETTINGS" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

@@ -1,0 +1,237 @@
+/**
+ * NoNumber Extension Manager Admin CSS
+ *
+ * @package			NoNumber Extension Manager
+ * @version			3.1.1
+ *
+ * @author			Peter van Westen <peter@nonumber.nl>
+ * @link			http://www.nonumber.nl
+ * @copyright		Copyright © 2012 NoNumber All Rights Reserved
+ * @license			http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+.icon-48-nonumbermanager {
+	background: transparent url(../images/logo.png) no-repeat 10px 9px !important;
+	text-indent: -9999px;
+}
+
+div#nnem table tbody tr td {
+	padding: 4px;
+}
+div#nnem table thead input {
+	margin-right: 4px;
+}
+div#nnem table checkbox_container {
+	height: 28px;
+}
+td.ext_name {
+	font-size: 18px;
+}
+a.nnem_link,
+a.nnem_link:hover,
+a.nolink,
+a.nolink:hover,
+div#nnem table a,
+div#nnem table a:hover {
+	text-decoration: none;
+}
+a.nolink,
+a.nolink:hover {
+	cursor: default;
+}
+div.has_install .all_ghosted_installselected,
+div.has_update .all_ghosted_installselected,
+div.has_install .all_ghosted_installall,
+div.has_update .all_ghosted_updateall,
+tr.uptodate .hide_uptodate,
+tr .installed,
+tr .not_installed,
+tr .free_installed,
+tr .pro_installed,
+tr .pro_not_installed,
+tr .pro_available,
+tr .pro_not_available,
+tr .pro_access,
+tr .pro_no_access {
+	display: none;
+}
+div.has_install .all_installselected,
+div.has_update .all_installselected,
+div.has_install .all_installall,
+div.has_update .all_updateall,
+tr.installed .installed,
+tr.not_installed .not_installed,
+tr.loading .not_installed,
+tr.free_installed .installed,
+tr.pro_installed .installed,
+tr.free_installed .free_installed,
+tr.pro_installed .pro_installed,
+tr.not_installed .pro_not_installed,
+tr.free_installed .pro_not_installed,
+tr.pro_available .pro_available,
+tr.pro_not_available .pro_not_available,
+tr.pro_access .pro_access,
+tr.pro_no_access .pro_no_access {
+	display: inline !important;
+}
+tr.loading .installed,
+tr.pro_not_available .pro_access,
+tr.pro_not_available .pro_no_access {
+	display: none !important;
+}
+
+span.readmore {
+	font-style: italic;
+	text-decoration: underline;
+}
+span.readmore,
+span.group_comment:hover span.readmore_text {
+	display: inline;
+}
+span.group_comment:hover span.readmore,
+span.readmore_text {
+	display: none;
+}
+
+span.nnem_button {
+	margin: 0 10px 10px 0;
+	padding: 2px;
+	display: inline-block;
+	*display: inline;
+	-webkit-border-radius: 6px;
+	-moz-border-radius: 6px;
+	border-radius: 6px;
+	background-color: transparent;
+	border: 2px solid #CCCCCC;
+	color: #333333;
+	text-align: center;
+	font-weight: bold;
+	text-decoration: none;
+}
+div.nnem_main_buttons span.nnem_button {
+	zoom: 1;
+}
+td span.nnem_button {
+	margin: 0 2px;
+}
+a span.nnem_button {
+	cursor: pointer;
+	padding: 5px 10px;
+	border: none;
+	background-color: #999999;
+	color: #FFFFFF;
+	-webkit-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+a:hover span.nnem_button {
+	-webkit-box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(82, 122, 204, 0.8);
+	-moz-box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(82, 122, 204, 0.8);
+	box-shadow: inset 0 5px 10px rgba(0, 0, 0, 0.2), 0 0 10px rgba(82, 122, 204, 0.8);
+}
+
+a.nolink:hover span.nnem_button {
+	cursor: default;
+	-webkit-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+	-moz-box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+	box-shadow: inset 0 -5px 10px rgba(0, 0, 0, 0.2), 0 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.buttons span.nnem_button {
+	display: block;
+}
+span.group_comment span.nnem_button {
+	text-align: left;
+	padding: 3px 10px;
+	border-width: 1px;
+	font-weight: normal;
+	color: #999999;
+	display: block;
+}
+
+span.current_version span.nnem_button,
+span.new_version span.nnem_button {
+	min-width: 36px;
+}
+span.free_installed > span.nnem_button,
+span.pro_no_access > span.nnem_button,
+span.pro_installed > span.nnem_button,
+span.pro_access > span.nnem_button {
+	color: #527ACC;
+	border-color: #527ACC;
+	background-color: #c4d0e8;
+	min-width: 30px;
+}
+span.pro_installed > span.nnem_button,
+span.pro_access > span.nnem_button {
+	color: #5EA62A;
+	border-color: #5EA62A;
+	background-color: #c7ddb8;
+}
+tr.update span.new_version span.nnem_button {
+	border-color: #F2783E;
+}
+
+span.comment_update span.nnem_button,
+span.comment_missing span.nnem_button,
+span.comment_pro_no_access span.nnem_button,
+span.comment_old span.nnem_button {
+	border-color: #F2783E;
+	color: #333333;
+	padding-left: 28px;
+	background: transparent url(../images/warning.png) no-repeat 5px 2px;
+}
+
+span.install span.nnem_button,
+span.installall span.nnem_button {
+	background-color: #527ACC;
+}
+span.update span.nnem_button,
+span.updateall span.nnem_button,
+span.nopro span.nnem_button {
+	background-color: #F2783E;
+}
+span.installselected span.nnem_button,
+span.buy span.nnem_button {
+	background-color: #5EA62A;
+}
+span.uninstall span.nnem_button {
+	background-color: #C7463C;
+}
+span.reinstall span.nnem_button,
+span.downgrade span.nnem_button,
+span.group_comment span.nnem_button {
+	background-color: transparent;
+	-webkit-box-shadow: none;
+	-moz-box-shadow: none;
+	box-shadow: none;
+}
+span.reinstall span.nnem_button,
+span.downgrade span.nnem_button {
+	color: #999999;
+}
+
+span.group_all_ghosted span.nnem_button {
+	filter: alpha(opacity = 30);
+	-moz-opacity: 0.3;
+	-khtml-opacity: 0.3;
+	opacity: 0.3;
+}
+
+progress.loading {
+	height: 9px;
+	width: 100%;
+}
+div.clr {
+	clear: both;
+}
+
+/* Tooltips */
+.changlog-tip {
+	max-width: none !important;
+}
+
+/* Modal */
+#sbox-window.nnem_modal {
+	padding: 0;
+}

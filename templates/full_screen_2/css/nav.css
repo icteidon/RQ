@@ -1,0 +1,132 @@
+/* 
+*	left and right menu
+*/
+.submenu ul {
+margin:-5px 0 0 0;
+padding:0 0 10px 0;
+}
+.submenu li {
+display:block;
+border:none;
+}
+.submenu li a, .submenu li span.separator {
+display:block;
+background: url(../images/underline.png) bottom left repeat-x;
+color:#67655e;
+font-size:100%;
+text-align:left;
+text-transform: uppercase;
+font-weight: normal;
+line-height:16px;
+margin:0;
+padding: 4px 6px 7px 6px;
+text-decoration:none;
+}
+.submenu li a:hover, .submenu li.active a, .submenu li span.separator:hover, .submenu li.active span.separator {
+text-decoration:none;
+color:#336699;
+}
+.submenu ul ul {
+margin:0 0 0 12px;
+padding:0;
+}
+.submenu ul li li {
+}
+.submenu li li a, .submenu li li span.separator {
+background-image: none;
+border-bottom:1px dotted #ccc;
+font-size:95%;
+font-weight: normal;
+text-transform: none;
+color:#67655e;
+line-height:12px;
+text-align:left;
+padding: 6px 4px 6px 10px;
+margin-bottom:1px;
+}
+.submenu li li:first-child a, .submenu li li:first-child span.separator {
+margin: 1px 0 1px 0;
+}
+.submenu li a:hover li a, .submenu li#current li a, .submenu li.active li a,
+.submenu li span.separator:hover li a, .submenu li a:hover li span.separator, .submenu li#current li span.separator, .submenu li.active li span.separator,
+.submenu li span.separator:hover li span.separator {
+background-image: none;
+text-decoration:none;
+color:#67655e;
+}
+.submenu li.parent li a, .submenu li.parent li span.separator {
+background-image: none;
+color:#67655e;
+}
+.submenu li#current.parent li a, .submenu li.active.parent li a,
+.submenu li#current.parent li span.separator, .submenu li.active.parent li span.separator {
+background-image: none;
+color:#67655e;
+}
+.submenu li li a:hover, .submenu li li#current a, .submenu li li#current.parent a,
+.submenu li#current li a:hover, .submenu li.active li a:hover, .submenu li.parent li a:hover,
+.submenu li li span.separator:hover, .submenu li li#current span.separator, .submenu li li#current.parent span.separator,
+.submenu li#current li span.separator:hover, .submenu li.active li span.separator:hover, .submenu li.parent li span.separator:hover {
+background-image: none;
+text-decoration:none;
+color:#336699;
+}
+.submenu ul ul ul {
+margin-left: 6px;
+}
+.submenu li li li a {
+background-image: none;
+font-size:90%;
+text-transform: none;
+font-weight: normal;
+color:#67655e;
+}
+.submenu li.active li#current li a {
+background-image: none;
+color:#67655e;
+}
+.submenu ul li li li a:hover, .submenu ul li li li#current a, .submenu ul li li li.active a,
+.submenu li.active li#current li a:hover {
+background-image: none;
+text-decoration:none;
+color:#336699;
+}
+.submenu li li li a:hover, .submenu li li li#current a, .submenu li li li.active a, .submenu li li li#current.parent a,
+.submenu li li#current li a:hover, .submenu li li.active li a:hover, .submenu li li.parent li a:hover {
+background-image: none;
+text-decoration:none;
+color:#336699;
+}
+/**	BOTTOM MENU		**/
+#bottom_menu {
+display:block;
+list-style: none;
+text-align:center;
+/**	change	**/
+}
+
+#bottom_menu li{
+margin:0;
+padding:0;
+display:inline;
+list-style : none;
+/**	change	**/
+}
+#bottom_menu li a, #bottom_menu li span.separator {
+text-decoration:none;
+/**	change	**/
+text-transform: uppercase;
+font-weight:normal;
+color:#888;
+font-size:90%;
+text-align:center;
+padding: 0px 22px;
+background: transparent url(../images/puce-menu.png) 0 50% no-repeat;
+}
+#bottom_menu li:first-child a {
+background-image: none;
+}
+#bottom_menu li a:hover, #bottom_menu li span.separator:hover, #bottom_menu li.active a {
+color:#336699;
+text-decoration: none;
+}

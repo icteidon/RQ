@@ -1,0 +1,18 @@
+/**
+ * Tabber editor button CSS
+ *
+ * @package			Tabber
+ * @version			2.1.0
+ *
+ * @author			Peter van Westen <peter@nonumber.nl>
+ * @link			http://www.nonumber.nl
+ * @copyright		Copyright © 2012 NoNumber All Rights Reserved
+ * @license			http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+.button2-left div.tabber {
+	background: transparent url(../images/button_right.png) no-repeat 100% 0;
+}
+.button2-left .blank.blank_tabber a {
+	padding: 0 6px;
+}

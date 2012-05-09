@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install type="plugin" group="system" version="1.6">
+	<name>PLG_SYSTEM_MODALIZER</name>
+	<description>PLG_SYSTEM_MODALIZER_DESC</description>
+	<version>3.1.0FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<!-- Files -->
+	<files>
+		<filename plugin="modalizer">modalizer</filename>
+		<filename>helper.php</filename>
+		<filename>index.html</filename>
+		<folder>images</folder>
+		<folder>modals</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="plg_system_modalizer" />
+				<field name="@license" type="nn_license" extension="MODALIZER" />
+				<field name="@version" type="nn_version" extension="MODALIZER" xml="/plugins/system/modalizer/modalizer.xml" />
+				<field name="@header" type="nn_header"
+					label="MODALIZER"
+					description="MODALIZER_DESC"
+					xml="/plugins/system/modalizer/modalizer.xml"
+					image="/plugins/system/modalizer/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/modalizer"
+					help_url="http://www.nonumber.nl/modalizer" />
+
+				<field name="modal_type" type="nn_radiolist" default="colorbox" label="MDL_MODAL_TYPE" description="MDL_MODAL_TYPE_DESC">
+					<option value="core">Joomla! Core (SqueezeBox)</option>
+					<option value="colorbox">ColorBox v1.3.19</option>
+					<option value="">* FancyBox v2.0.6</option>
+					<option value="">* LyteBox v5.5</option>
+					<option value="">* ShadowBox v3.0.3</option>
+				</field>
+				<field name="@toggler_notice_modal_type_a" type="nn_toggler" param="modal_type" value="" />
+				<field name="@notice_modal_type" type="nn_plaintext" label="*" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@toggler_notice_modal_type_b" type="nn_toggler" />
+
+				<!-- Modal Types -->
+				<!-- SqueezeBox -->
+				<field name="@toggler_core_a" type="nn_toggler" param="modal_type" value="core" />
+				<field name="@block_core_a" type="nn_block" start="1" label="MDL_SQUEEZEBOX" />
+				<field name="@block_core_mootools" type="nn_block" description="MDL_MOOTOOLS_FRAMEWORK_DESC" />
+				<field name="@block_core_b" type="nn_block" end="1" />
+				<field name="@toggler_core_b" type="nn_toggler" />
+
+				<!-- ColorBox -->
+				<field name="@toggler_colorbox_a" type="nn_toggler" param="modal_type" value="colorbox," />
+				<field name="@block_colorbox_a" type="nn_block" start="1" label="MDL_COLORBOX" />
+				<field name="@block_colorbox_jquery" type="nn_block" description="MDL_JQUERY_FRAMEWORK_DESC" />
+				<field name="modal_colorbox_style" type="folderlist" directory="plugins/system/modalizer/modals/colorbox/" filter="style" hide_none="1" hide_default="1" default="style1" label="MDL_STYLE" description="MDL_STYLE_DESC" />
+				<field name="modal_colorbox_transition" type="radio" default="" label="MDL_ANIMATION" description="MDL_ANIMATION_DESC">
+					<option value="none">JNONE</option>
+					<option value="fade">MDL_FADE</option>
+					<option value="">MDL_ELASTIC</option>
+				</field>
+				<field name="@block_colorbox_b" type="nn_block" end="1" />
+				<field name="@toggler_colorbox_b" type="nn_toggler" />
+
+
+				<!-- Click Outside -->
+				<field name="@toggler_click_outside_a" type="nn_toggler" param="modal_type" value="colorbox,,fancybox,lytebox,shadowbox" />
+				<field name="@block_click_outside_a" type="nn_block" start="1" label="MDL_CLICK_OUTSIDE" />
+				<field name="modal_click_outside" type="radio" default="1" label="MDL_CLICK_OUTSIDE" description="MDL_CLICK_OUTSIDE_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@block_click_outside_b" type="nn_block" end="1" />
+				<field name="@toggler_click_outside_b" type="nn_toggler" />
+
+				<!-- Open in Iframe -->
+				<field name="@block_iframe_a" type="nn_block" start="1" label="MDL_OPEN_IN_IFRAME" />
+				<field name="modal_iframe" type="radio" default="1" label="MDL_OPEN_IN_IFRAME" description="MDL_OPEN_IN_IFRAME_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_iframe_2a" type="nn_toggler" param="modal_type|modal_iframe" value="lytebox,shadowbox|1" />
+				<field name="modal_tmpl_links" type="radio" default="1" label="MDL_CONVERT_LINKS_INSIDE_WINDOW" description="MDL_CONVERT_LINKS_INSIDE_WINDOW_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_iframe_2b" type="nn_toggler" />
+				<field name="@block_iframe_b" type="nn_block" end="1" />
+
+				<!-- Auto Group -->
+				<field name="@toggler_group_a" type="nn_toggler" param="modal_type" value="colorbox,,fancybox,lytebox,shadowbox" />
+				<field name="@block_group_a" type="nn_block" start="1" label="MDL_AUTO_GROUP" />
+				<field name="@notice_modal_group" type="nn_plaintext" label="MDL_AUTO_GROUP" description="MDL_AUTO_GROUP_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@block_group_b" type="nn_block" end="1" />
+				<field name="@toggler_group_b" type="nn_toggler" />
+
+				<!-- Default Window Sizes -->
+				<field name="@block_size_a" type="nn_block" start="1" label="MDL_DEFAULT_WINDOW_SIZES" />
+				<!-- Default -->
+				<field name="@block_size_default_a" type="nn_block" start="1" label="Default" />
+				<field name="modal_size" type="radio" default="0" label="Default" description="MDL_DEFAULT_WINDOW_SIZE_DESC">
+					<option value="0">NN_AUTO</option>
+					<option value="1">MDL_CUSTOM</option>
+				</field>
+				<field name="@toggler_size_default_a" type="nn_toggler" param="modal_size" value="1" />
+				<field name="@toggler_size_default_1a" type="nn_toggler" param="modal_type" value="colorbox,,fancybox" />
+				<field name="modal_width" type="text" size="10" default="80%" label="NN_WIDTH" description="MDL_WIDTH_DESC" />
+				<field name="modal_height" type="text" size="10" default="80%" label="NN_HEIGHT" description="MDL_HEIGHT_DESC" />
+				<field name="@toggler_size_default_1b" type="nn_toggler" />
+				<field name="@toggler_size_default_2a" type="nn_toggler" param="modal_type" value="core,lytebox,shadowbox" />
+				<field name="modal_width_px" type="text" size="10" default="400" label="MDL_WIDTH_PX" description="MDL_WIDTH_PX_DESC" />
+				<field name="modal_height_px" type="text" size="10" default="400" label="MDL_HEIGHT_PX" description="MDL_HEIGHT_PX_DESC" />
+				<field name="@toggler_size_default_2b" type="nn_toggler" />
+				<field name="@toggler_size_default_b" type="nn_toggler" />
+				<field name="@block_size_default_b" type="nn_block" end="1" />
+
+				<!-- External Sites -->
+				<field name="@block_size_ext_a" type="nn_block" start="1" label="MDL_EXTERNAL_SITES" />
+				<field name="modal_ext_size" type="radio" default="2" label="MDL_EXTERNAL_SITES" description="MDL_DEFAULT_WINDOW_SIZE_DESC">
+					<option value="0">NN_AUTO</option>
+					<option value="1">MDL_CUSTOM</option>
+					<option value="2">NN_USE_DEFAULT</option>
+				</field>
+				<field name="@toggler_size_ext_a" type="nn_toggler" param="modal_ext_size" value="1" />
+				<field name="@toggler_size_ext_1a" type="nn_toggler" param="modal_type" value="colorbox,,fancybox" />
+				<field name="modal_ext_width" type="text" size="10" default="80%" label="NN_WIDTH" description="MDL_WIDTH_DESC" />
+				<field name="modal_ext_height" type="text" size="10" default="80%" label="NN_HEIGHT" description="MDL_HEIGHT_DESC" />
+				<field name="@toggler_size_ext_1b" type="nn_toggler" />
+				<field name="@toggler_size_ext_2a" type="nn_toggler" param="modal_type" value="core,lytebox,shadowbox" />
+				<field name="modal_ext_width_px" type="text" size="10" default="400" label="MDL_WIDTH_PX" description="MDL_WIDTH_PX_DESC" />
+				<field name="modal_ext_height_px" type="text" size="10" default="400" label="MDL_HEIGHT_PX" description="MDL_HEIGHT_PX_DESC" />
+				<field name="@toggler_size_ext_2b" type="nn_toggler" />
+				<field name="@toggler_size_ext_b" type="nn_toggler" />
+				<field name="@block_size_ext_b" type="nn_block" end="1" />
+
+				<!-- Images -->
+				<field name="@block_size_img_a" type="nn_block" start="1" label="MDL_IMAGES" />
+				<field name="@toggler_size_img_1a" type="nn_toggler" param="modal_type" value="core,colorbox,,fancybox,lytebox" />
+				<field name="@modal_img_size" type="radio" default="0" label="MDL_IMAGES" description="MDL_AUTO_DESC">
+					<option value="0">NN_AUTO</option>
+				</field>
+				<field name="@toggler_size_img_1b" type="nn_toggler" />
+				<field name="@block_size_img_b" type="nn_block" end="1" />
+				<field name="@block_size_b" type="nn_block" end="1" />
+			</fieldset>
+
+			<fieldset name="MDL_ACTIVATOR_SETTINGS">
+				<field name="@block_activator" type="nn_block" nostyle="1" description="MDL_ACTIVATOR_SETTINGS_DESC" />
+
+				<!-- By Classnames -->
+				<field name="@block_activator_class_a" type="nn_block" start="1" label="MDL_BY_CLASSNAMES" description="MDL_BY_CLASSNAMES_DESC" />
+				<field name="enable_classnames" type="radio" default="1" label="NN_ENABLE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_activator_class_a" type="nn_toggler" param="enable_classnames" value="1" />
+				<field name="classnames" type="text" size="40" default="modal,modalizer" label="MDL_CLASSNAMES" description="MDL_CLASSNAMES_DESC" />
+				<field name="@toggler_activator_class_b" type="nn_toggler" />
+				<field name="@block_activator_class_b" type="nn_block" end="1" />
+
+				<!-- By Filetypes -->
+				<field name="@block_activator_filetypes_a" type="nn_block" start="1" label="MDL_BY_FILETYPES" description="MDL_BY_FILETYPES_DESC" />
+				<field name="@notice_enable_filetypes" type="nn_plaintext" label="NN_ENABLE" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@block_activator_filetypes_b" type="nn_block" end="1" />
+
+				<!-- By URLs -->
+				<field name="@block_activator_urls_a" type="nn_block" start="1" label="MDL_BY_URLS" description="MDL_BY_URLS_DESC" />
+				<field name="@notice_enable_urls" type="nn_plaintext" label="NN_ENABLE" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+				<field name="@block_activator_urls_b" type="nn_block" end="1" />
+
+				<!-- By Target -->
+				<field name="@block_activator_target_a" type="nn_block" start="1" label="MDL_BY_TARGET" description="MDL_BY_TARGET_DESC" />
+				<field name="enable_target" type="radio" default="0" label="NN_ENABLE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_activator_target_a" type="nn_toggler" param="enable_target" value="1" />
+				<field name="target_internal" type="radio" default="1" label="MDL_ENABLE_INTERNAL" description="MDL_ENABLE_INTERNAL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="target_external" type="radio" default="0" label="MDL_ENABLE_EXTERNAL" description="MDL_ENABLE_EXTERNAL_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="target_disablefiletypes" type="text" size="40" default="" label="MDL_DISABLE_ON_FILETYPES" description="MDL_DISABLE_ON_FILETYPES_DESC" />
+				<field name="@toggler_activator_target_b" type="nn_toggler" />
+				<field name="@block_activator_target_b" type="nn_block" end="1" />
+
+				<!-- By Syntax -->
+				<field name="@block_activator_syntax_a" type="nn_block" start="1" label="MDL_BY_SYNTAX" description="MDL_BY_SYNTAX_DESC" />
+				<field name="enable_syntax" type="radio" default="1" label="NN_ENABLE">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_activator_syntax_a" type="nn_toggler" param="enable_syntax" value="1" />
+				<field name="syntax" type="text" size="20" default="modal" label="MDL_SYNTAX_WORD" description="MDL_SYNTAX_WORD_DESC" />
+				<field name="@toggler_activator_syntax_b" type="nn_toggler" />
+				<field name="@block_activator_syntax_b" type="nn_block" end="1" />
+			</fieldset>
+
+			<fieldset name="MDL_ADVANCED_SETTINGS">
+				<field name="tmpl" type="text" default="component" label="MDL_SUB_TEMPLATE" description="MDL_SUB_TEMPLATE_DESC" />
+
+				<field name="@toggler_add_redirect_a" type="nn_toggler" param="modal_type|modal_iframe" value="lytebox,shadowbox|1" />
+				<field name="add_redirect" type="radio" default="1" label="MDL_ADD_REDIRECT" description="MDL_ADD_REDIRECT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_add_redirect_b" type="nn_toggler" />
+
+				<field name="@toggler_advanced_jquery_a" type="nn_toggler" param="modal_type" value="colorbox,,fancybox" />
+				<field name="load_jquery" type="radio" default="1" label="MDL_LOAD_JQUERY_SCRIPT" description="MDL_LOAD_JQUERY_SCRIPT_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="@toggler_advanced_jquery_b" type="nn_toggler" />
+
+				<field name="disable_components" type="nn_components" default="" admin="0" show_content="1" label="NN_DISABLE_ON_COMPONENTS" description="MDL_DISABLE_ON_COMPONENTS_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

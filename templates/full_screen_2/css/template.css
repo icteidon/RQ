@@ -1,0 +1,379 @@
+/*
+*    JoomSpirit CSS file for typo
+*/
+body {
+font-family: 'Trebuchet MS', helvetica neue, helvetica, sans-serif;
+color:#67655e;
+line-height: 1.3em;
+}
+p {
+margin: 8px 0 14px 0;
+}
+em {
+font-weight:bold;
+}
+h1, h2, h3, h4 {
+font-family: helvetica neue, helvetica, arial, verdana, sans-serif;
+text-decoration: none;
+text-transform:none;
+font-weight:normal;
+padding:8px 0 4px 0;
+}
+h1, .componentheading {
+display: block;
+font-size: 25px;
+font-weight:normal;
+line-height:140%;
+padding:  0 0 0 0;
+margin: 0px 0 16px 0;
+text-transform:none;
+letter-spacing:-0.3px;
+color:#000;
+}
+h1 a {
+color:#000;
+text-decoration: none;
+}
+h1 a:hover {
+color:#000;
+text-decoration: none;
+}
+h1 span, h1 a span, h1 a:hover span {
+color:#67655e;
+}
+h2 {
+font-size:120%;
+line-height:20px;
+padding:8px 0 4px 0;
+margin-bottom:8px;
+color:#222;
+font-weight:normal;
+text-transform:none;
+background: transparent url(../images/underline.png) left bottom repeat-x;
+}
+h2.contentheading {
+}
+h2 a {
+color:#222;
+text-decoration: none;
+}
+h2 a:hover {
+text-decoration: none;
+color:#222;
+}
+h3 {
+font-size:105%;
+line-height:16px;
+font-weight:bold;
+text-transform:none;
+}
+h4 {
+font-size:110%;
+line-height:16px;
+font-weight:normal;
+text-transform:none;
+}
+h5 {
+font-size:100%;
+line-height:16px;
+font-weight:normal;
+text-transform:none;
+}
+/**  titles modules    **/
+.left h3, .right h3, .user1 h3, .user2 h3, .user3 h3, 
+.user4 h3, .user5 h3, .user6 h3 {
+font-family: arial, verdana, sans-serif;
+margin-bottom:10px;
+padding:0 0 4px 0;
+font-weight:normal;
+letter-spacing:-0.3px;
+font-size:20px;
+background: transparent url(../images/bg_h3_left.gif) left bottom repeat-x;
+color:#000;
+}
+.left h3 span, .right h3 span, .user1 h3 span, .user2 h3 span, .user3 h3 span, 
+.user4 h3 span, .user5 h3 span, .user6 h3 span {
+color:#67655e;
+}
+/**      LINK    **/
+a {
+color:#336699;
+text-decoration : none;
+}
+a:hover {
+color:#336699;
+text-decoration : underline;
+}
+a:active, a:focus {
+outline:none;
+}
+.link a {
+background: transparent url(../images/puce-link.png) 0 50% no-repeat;
+padding-left:15px;
+line-height:18px;
+text-decoration:none;
+}
+/*  Pathway  */
+#breadcrumb a, #breadcrumb {
+color:#aaa;
+text-decoration:none;
+}
+#breadcrumb a:hover {
+color:#336699;
+text-decoration:none;
+}
+/*  List  */
+ul.normal, ul.check, ul.arrow, ul.normal_green, ul.check_green, ul.arrow_green, ul.circle, ul.circle_red,
+ul.normal_red, ul.check_red, ul.arrow_red, ul.normal_white, ul.check_white, ul.arrow_white, ul.circle_white  {
+margin-left:6px;
+margin-top:10px;
+padding-left:0;
+}
+.normal li, .check li, .arrow li, .normal_red li, .check_red li, .arrow_red li, .circle li,
+.circle_red li, .normal_white li, .check_white li, .arrow_white li, .circle_white li  {
+background: url(../images/list_normal.png) 0 0px no-repeat;
+padding-left: 21px;
+list-style:none;
+margin:5px 0;
+}
+.check li {
+background: url(../images/list_check.png) 0 2px no-repeat;
+}
+.arrow li {
+background: url(../images/list_arrow.png) 0 1px no-repeat;
+}
+.circle li {
+background: url(../images/list_circle.png) 0 2px no-repeat;
+}
+.normal_red li {
+background: url(../images/list_normal_red.png) 0 0px no-repeat;
+}
+.arrow_red li {
+background: url(../images/list_arrow_red.png) 0 1px no-repeat;
+}
+.check_red li {
+background: url(../images/list_check_red.png) 0 2px no-repeat;
+}
+.circle_red li {
+background: url(../images/list_circle_red.png) 0 2px no-repeat;
+}
+.normal li:hover, .check li:hover, .arrow li:hover, .normal_red li:hover, .check_red li:hover, .arrow_red li:hover, .circle li:hover,
+.circle_red li:hover, .normal_white li:hover, .check_white li:hover, .arrow_white li:hover, .circle_white li:hover, ol li:hover  {
+color: #111;
+cursor:default;
+}
+ul.normal ul, ul.check ul, ul.arrow ul, ul.normal_red ul, ul.check_red ul, ul.arrow_red ul, ul.circle ul, 
+ul.circle_red ul, ul.normal_white ul, ul.check_white ul, ul.arrow_white ul, ul.circle_white ul {
+margin-left: 0px;
+margin-top:4px;
+padding-left:0;
+}
+.normal li li, .check li li, .arrow li li, .normal_red li li, .check_red li li , .arrow_red li li , .circle li li, 
+.circle_red li li, .circle_white li li, .check_white li li, .arrow_white li li, .normal_white li li  {
+background: url(../images/list_normal.png) 0 2px no-repeat;
+padding-left: 18px;
+list-style:none;
+margin:5px 0;
+}
+ol {
+margin: 5px 0;
+background-color: transparent;
+padding: 0 0 0 20px;
+}
+ol li {
+margin: 0;
+padding: 1px 5px;
+font-weight: normal;
+}
+/*
+*  Quotation
+*/
+blockquote.black, blockquote.red, blockquote.green, blockquote.pink, blockquote.white, blockquote.blue {
+margin: 10px 30px 10px 30px;
+padding: 10px 35px 10px 35px;
+border: none;
+background: url(../images/quote_black.png) 0 5px no-repeat;
+text-align:justify;
+font-style:italic;
+font-size:105%;
+}
+blockquote.red {
+background: url(../images/quote_red.png) 0 5px no-repeat;
+}
+blockquote.green {
+background: url(../images/quote_green.png) 0 5px no-repeat;
+}
+blockquote.pink {
+background: url(../images/quote_pink.png) 0 5px no-repeat;
+}
+blockquote.white {
+background: url(../images/quote_white.png) 0 5px no-repeat;
+}
+blockquote.blue {
+background: url(../images/quote_blue.png) 0 5px no-repeat;
+}
+blockquote.black p , blockquote.red p, blockquote.green p, blockquote.pink p, blockquote.white p, blockquote.blue p {
+margin: 0px -35px -10px 0px;
+padding: 0px 35px 10px 0px;
+background: url(../images/quote_black_end.png) 100%  no-repeat;
+color: #444;
+}
+blockquote.red p {
+background: url(../images/quote_red_end.png) 100%  no-repeat;
+color: #a93232;
+}
+blockquote.green p {
+background: url(../images/quote_green_end.png) 100%  no-repeat;
+color: #88a160;
+}
+blockquote.pink p {
+background: url(../images/quote_pink_end.png) 100%  no-repeat;
+color: #99cc66;
+}
+blockquote.white p {
+background: url(../images/quote_white_end.png) 100%  no-repeat;
+color: #eee;
+}
+blockquote.blue p {
+background: url(../images/quote_blue_end.png) 100%  no-repeat;
+color: #006699;
+}
+/**  DIV Info  **/
+.info {
+line-height:25px;
+padding-left:30px;
+border-top:1px solid #ccc;
+border-bottom:1px solid #ccc;
+background: #fff url(../images/logo_info.gif) 4px 3px no-repeat;
+margin: 10px 0;
+color: #000;
+}
+/**  login  **/
+#modlgn_username, #modlgn_passwd {
+background: transparent url(../images/black-08.png) top left repeat;
+font-size:90%;
+width:150px;
+}
+#modlgn_username:hover, #modlgn_passwd:hover,
+#modlgn_username:focus, #modlgn_passwd:focus {
+background: transparent url(../images/black-10.png) top left repeat;
+}
+#submit_login {
+float:left;
+font-size:90%;
+padding:2px 6px;
+}
+ul.icon_login {
+float:left;
+margin: 0 0 0 4px;
+}
+ul.icon_login li, ul.icon_login li {
+display:block;
+float:left;
+width:16px;
+height:16px;
+margin:4px 0 0 5px;
+}
+ul.icon_login li a:hover, ul.icon_login li#current a, ul.icon_login li.active a {
+border:none;
+}
+#form-login-remember {
+clear:both;
+padding-top:8px;
+}
+p#form-login-username {
+margin:0;
+}
+p#form-login-password {
+margin: 8px 0 8px 0;
+}
+#modlgn_remember {
+background-color:transparent;
+border:none;
+}
+/**  read more  **/
+
+.readmore a {
+background: transparent url(../images/black-08.png) top left repeat;
+border:1px solid #eee;
+border-color:#ddd #bbb #bbb #ddd ;
+-moz-border-radius: 4px;
+-webkit-border-radius: 4px;
+-khtml-border-radius: 4px;
+border-radius: 4px;
+display:inline-block;
+font-size:12px;
+font-weight:normal;
+margin-top:5px;
+padding:2px 5px 2px 10px;
+text-decoration:none;
+text-transform:none;
+text-shadow: 0px 1px 0px #fff;
+font-style:italic;
+color:#67655e;
+}
+
+.readmore a:hover {
+background: transparent url(../images/black-10.png) top left repeat;
+border-color: #bbb #ddd #ddd #bbb;
+color: #336699;
+text-decoration:none;
+}
+
+
+/**   TOOL TIPS    **/
+
+.tips {
+text-decoration:underline;
+cursor:pointer;
+}
+
+.tool-tip {
+width: 139px;
+z-index: 13000;
+}
+ 
+.tool-title {
+font-weight: bold;
+font-size: 115%;
+margin: 0;
+color:#000;
+padding: 8px 8px 4px;
+background: transparent url(../images/bubble.png) top left no-repeat;
+}
+ 
+.tool-text {
+font-size: 100%;
+padding: 4px 8px 8px;
+color: #444;
+background: transparent url(../images/bubble.png) bottom right no-repeat;
+}
+/**    FOOTER    **/
+#bottom_site {
+color:#999;
+}
+#bottom_site a {
+color:#999;
+text-decoration : underline;
+}
+#bottom_site a:hover {
+color:#336699;
+text-decoration: none;
+}
+
+/**  images  **/
+.shadow {
+margin: 4px;
+-moz-box-shadow : 0px 2px 10px #999;
+-webkit-box-shadow : 0px 2px 10px #999;
+border:4px solid #fff;
+}
+
+/**  font face  **/
+@font-face {
+font-family: 'JosefinSansStdLight';
+src: url('../font/josefinsansstd-light-webfont.eot');
+src: local('☺'), url('../font/josefinsansstd-light-webfont.woff') format('woff'), url('../font/josefinsansstd-light-webfont.ttf') format('truetype'), url('../font/josefinsansstd-light-webfont.svg#webfontugsqlauR') format('svg');
+font-weight: normal;
+font-style: normal;
+}

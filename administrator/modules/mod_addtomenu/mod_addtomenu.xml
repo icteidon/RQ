@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.6" type="module">
+	<name>MOD_ADDTOMENU</name>
+	<description>MOD_ADDTOMENU_DESC</description>
+	<version>2.2.0FREE</version>
+	<creationDate>May 2012</creationDate>
+	<author>NoNumber (Peter van Westen)</author>
+	<authorEmail>peter@nonumber.nl</authorEmail>
+	<authorUrl>http://www.nonumber.nl</authorUrl>
+	<copyright>Copyright © 2012 NoNumber All Rights Reserved</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+
+	<files>
+		<filename module="mod_addtomenu">mod_addtomenu.php</filename>
+		<folder>addtomenu</folder>
+	</files>
+
+	<!-- Parameters -->
+	<config>
+		<fields name="params" addfieldpath="/plugins/system/nnframework/fields">
+			<fieldset name="basic">
+				<field name="@loadlanguage" type="nn_loadlanguage" extension="mod_addtomenu" admin="1" />
+				<field name="@license" type="nn_license" extension="ADD_TO_MENU" />
+				<field name="@version" type="nn_version" extension="ADD_TO_MENU" xml="administrator/modules/mod_addtomenu/mod_addtomenu.xml" />
+				<field name="@header" type="nn_header"
+					label="ADD_TO_MENU"
+					description="ADD_TO_MENU_DESC"
+					image="/administrator/modules/mod_addtomenu/addtomenu/images/logo.png"
+					image_w="120" image_h="160"
+					url="http://www.nonumber.nl/addtomenu"
+					help_url="http://www.nonumber.nl/addtomenu" />
+
+				<field name="display_link" type="radio" default="both" label="NN_DISPLAY_LINK" description="NN_DISPLAY_LINK_DESC">
+					<option value="icon">NN_ICON_ONLY</option>
+					<option value="text">NN_TEXT_ONLY</option>
+					<option value="both">NN_BOTH</option>
+				</field>
+				<field name="@toggler_link_a" type="nn_toggler" param="display_link" value="text,both" />
+				<field name="icon_text" type="text" default="Add to Menu" label="NN_LINK_TEXT" description="NN_LINK_TEXT_DESC" />
+				<field name="@toggler_link_b" type="nn_toggler" />
+				<field name="display_tooltip" type="radio" default="1" label="NN_DISPLAY_TOOLTIP" description="NN_DISPLAY_TOOLTIP_DESC">
+					<option value="0">JNO</option>
+					<option value="1">JYES</option>
+				</field>
+				<field name="adjust_modal_w" type="text" default="0" size="5" label="ATM_ADJUST_MODAL_WIDTH" description="ATM_ADJUST_MODAL_DESC" />
+				<field name="adjust_modal_h" type="text" default="0" size="5" label="ATM_ADJUST_MODAL_HEIGHT" description="ATM_ADJUST_MODAL_DESC" />
+			</fieldset>
+		</fields>
+	</config>
+</install>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<config addfieldpath="/plugins/system/nnframework/fields">
+	<fieldset name="options" label="JOPTIONS">
+		<field name="@loadlanguage" type="nn_loadlanguage" extension="com_rereplacer" />
+		<field name="view_state" type="radio" default="1" label="NN_VIEW" description="NN_VIEW_DESC">
+			<option value="0">NN_SIMPLE</option>
+			<option value="1">NN_NORMAL</option>
+			<option value="">NN_ADVANCED</option>
+		</field>
+		<field name="@toggler_view_state_a" type="nn_toggler" param="view_state" value="" />
+		<field name="@notice_view_state" type="nn_plaintext" label="NN_ADVANCED" description="" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<field name="@toggler_view_state_b" type="nn_toggler" />
+		<field name="show_fields" type="radio" default="0" label="RR_SHOW_SEARCH_AND_REPLACE_FIELDS" description="RR_SHOW_SEARCH_AND_REPLACE_FIELDS_DESC">
+			<option value="0">JHIDE</option>
+			<option value="1">JSHOW</option>
+		</field>
+
+		<field name="@block_assignments_a" type="nn_block" start="1" label="NN_PUBLISHING_ASSIGNMENTS" />
+		<field name="@notice_show_ignores" type="nn_plaintext" label="NN_IGNORES" description="NN_IGNORES_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<field name="@notice_use_sef" type="nn_plaintext" label="NN_USE_SEF" description="NN_USE_SEF_DESC" default="NN_ONLY_AVAILABLE_IN_PRO" />
+		<field name="@block_assignments_b" type="nn_block" end="1" />
+
+		<field name="@block_other_a" type="nn_block" start="1" label="NN_OTHER_SETTINGS" />
+		<field name="contact_table" type="text" default="contact_details" label="RR_CONTACT_TABLE" description="RR_CONTACT_TABLE_DESC" />
+		<field name="@block_other_b" type="nn_block" end="1" />
+	</fieldset>
+
+	<fieldset name="permissions" label="JCONFIG_PERMISSIONS_LABEL" description="JCONFIG_PERMISSIONS_DESC">
+		<field name="rules" type="rules" label="JCONFIG_PERMISSIONS_LABEL" class="inputbox" filter="rules" validate="rules"
+			component="com_rereplacer" section="component" />
+	</fieldset>
+</config>

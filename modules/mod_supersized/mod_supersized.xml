@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<extension
+	type="module"
+	version="1.6.0"
+	client="site"
+	method="upgrade">	
+	<name>supersized</name>
+	<author>JoomSpirit</author>
+	<creationDate>august 2010</creationDate>
+	<copyright>JoomSpirit</copyright>
+	<license>GNU/GPL</license>
+	<authorEmail>contact@joomspirit.com</authorEmail>
+	<authorUrl>http://www.joomspirit.com</authorUrl>
+	<version>1.0</version>
+	<description>Module for display Supersized slideshow. Work only with the appropriate JoomSpirit template.</description>
+	<files>
+		<filename module="mod_supersized">mod_supersized.php</filename>
+		<filename module="mod_supersized">index.html</filename>
+		<filename module="mod_supersized">helper.php</filename>
+		<folder>tmpl</folder>
+	</files>
+	
+	<config>
+		<fields name="params">
+			<fieldset name="basic"> 
+				
+				<field name="image_01" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_01.jpg" />
+				
+				<field name="image_02" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_02.jpg" />
+			
+				<field name="image_03" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_03.jpg" />
+			
+				<field name="image_04" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_04.jpg" />
+			
+				<field name="image_05" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_05.jpg" />
+			
+				<field name="image_06" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_06.jpg" />
+			
+				<field name="image_07" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_07.jpg" />
+			
+				<field name="image_08" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_08.jpg" />
+			
+				<field name="image_09" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_09.jpg" />
+			
+				<field name="image_10" type="text" default="" label="relative url of your image" size="48" description="Relative url after images/. Example : slide/image_10.jpg" />
+
+	
+			</fieldset>
+		</fields>
+	</config>
+</extension>

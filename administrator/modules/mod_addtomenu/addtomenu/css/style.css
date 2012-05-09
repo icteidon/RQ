@@ -1,0 +1,72 @@
+/**
+ * Stylesheet
+ *
+ * @package			Add to Menu
+ * @version			2.2.0
+ *
+ * @author			Peter van Westen <peter@nonumber.nl>
+ * @link			http://www.nonumber.nl
+ * @copyright		Copyright © 2012 NoNumber All Rights Reserved
+ * @license			http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL
+ */
+
+#module-status {
+	background-image: none !important;
+}
+#module-status span.addtomenu_status a.nn_status_link span {
+	background: transparent url(../images/icon.png) no-repeat 3px 3px;
+	padding-right: 0;
+	min-height: 16px;
+	cursor: pointer;
+}
+#module-status span.betterpreview_status a.nn_status_link .no_icon {
+	background-image: none;
+	padding-left: 0;
+}
+#module-status span.betterpreview_status a.nn_status_link .no_text {
+	padding-left: 0;
+	width: 22px;
+}
+
+#addtomenu_msg,
+#addtomenu_msg.visible {
+	display: none;
+}
+body>#addtomenu_msg {
+	position: fixed;
+	z-index: 200;
+	top: 0;
+	right: 0;
+	padding: 5px 20px;
+	width: 100%;
+	height: 16px;
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #666666;
+}
+body>#addtomenu_msg.visible {
+	display: inline;
+}
+body>#addtomenu_msg.success {
+	background-color: #4e8858;
+}
+body>#addtomenu_msg.failure {
+	background-color: #884e4e;
+}
+body>#addtomenu_msg img {
+	vertical-align: sub;
+}
+
+/* APLite template */
+#module-status.ap-status span.addtomenu_status a.nn_status_link {
+	float: none;
+	margin-right: 0;
+}
+#module-status.ap-status span.addtomenu_status a.nn_status_link span {
+	display: inline-block;
+	background-position: 0 0;
+}
+#module-status.ap-status span.addtomenu_status a.nn_status_link .no_text {
+	width: 16px;
+}
