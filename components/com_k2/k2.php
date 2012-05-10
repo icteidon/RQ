@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: k2.php 1521 2012-03-08 19:35:58Z joomlaworks $
+ * @version		$Id: k2.php 1563 2012-05-04 16:09:39Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -56,4 +56,8 @@ else {
 	JError::raiseError(404, JText::_('K2_NOT_FOUND'));
 }
 
-echo "\n<!-- JoomlaWorks \"K2\" (v2.5.6) | Learn more about K2 at http://getk2.org -->\n\n";
+if(JRequest::getCmd('format') != 'json')
+{
+    echo "\n<!-- JoomlaWorks \"K2\" (v2.5.7) | Learn more about K2 at http://getk2.org -->\n\n";
+}
+

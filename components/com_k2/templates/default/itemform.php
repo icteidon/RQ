@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: itemform.php 1507 2012-03-01 20:39:22Z joomlaworks $
+ * @version		$Id: itemform.php 1556 2012-04-19 17:34:51Z joomlaworks $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -259,7 +259,9 @@ $document->addScriptDeclaration("
 												<?php echo JText::_('K2_ITEM_IMAGE_PREVIEW'); ?>
 											</td>
 											<td>
-												<a class="modal" rel="{handler: 'image'}" href="<?php echo $this->row->image; ?>" title="<?php echo JText::_('K2_CLICK_ON_IMAGE_TO_PREVIEW_IN_ORIGINAL_SIZE'); ?>"> <img alt="<?php echo $this->row->title; ?>" src="<?php echo $this->row->thumb; ?>" class="k2AdminImage"/> </a>
+												<a class="modal" rel="{handler: 'image'}" href="<?php echo $this->row->image; ?>" title="<?php echo JText::_('K2_CLICK_ON_IMAGE_TO_PREVIEW_IN_ORIGINAL_SIZE'); ?>">
+													<img alt="<?php echo $this->row->title; ?>" src="<?php echo $this->row->thumb; ?>" class="k2AdminImage" />
+												</a>
 												<input type="checkbox" name="del_image" id="del_image" />
 												<label for="del_image"><?php echo JText::_('K2_CHECK_THIS_BOX_TO_DELETE_CURRENT_IMAGE_OR_JUST_UPLOAD_A_NEW_IMAGE_TO_REPLACE_THE_EXISTING_ONE'); ?></label>
 											</td>
@@ -295,10 +297,12 @@ $document->addScriptDeclaration("
 												<br />
 												<br />
 												<?php echo JText::_('K2_OR_ENTER_A_FLICKR_SET_URL'); ?>
-												<input type="text" name="flickrGallery" size="50" value="<?php echo ($this->row->galleryType == 'flickr')? $this->row->galleryValue : ''; ?>" />
+												<input type="text" name="flickrGallery" size="50" value="<?php echo ($this->row->galleryType == 'flickr') ? $this->row->galleryValue : ''; ?>" />
 												<?php if (!empty($this->row->gallery)): ?>
-												<div id="itemGallery"> <?php echo $this->row->gallery; ?>
-													<input type="checkbox" name="del_gallery" id="del_gallery"/>
+												<div id="itemGallery">
+													<?php echo $this->row->gallery; ?>
+													<br />
+													<input type="checkbox" name="del_gallery" id="del_gallery" />
 													<label for="del_gallery"><?php echo JText::_('K2_CHECK_THIS_BOX_TO_DELETE_CURRENT_IMAGE_GALLERY_OR_JUST_UPLOAD_A_NEW_IMAGE_GALLERY_TO_REPLACE_THE_EXISTING_ONE'); ?></label>
 												</div>
 												<?php endif; ?>

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: k2.php 1538 2012-04-06 15:03:50Z lefteris.kavadas $
+ * @version		$Id: k2.php 1559 2012-04-26 09:15:14Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -158,7 +158,15 @@ class plgUserK2 extends JPlugin
 			$db = JFactory::getDBO();
 			$db->setQuery("SELECT id FROM #__users WHERE username = ".$db->Quote($user['username']));
 			$id = $db->loadResult();
-			$k2id = $this->getK2UserID($id);
+            
+            if($id)
+            {
+                $k2id = $this->getK2UserID($id);
+            }
+            else {
+                $k2id = false;
+            }
+            
 
 			JTable::addIncludePath(JPATH_ADMINISTRATOR.DS.'components'.DS.'com_k2'.DS.'tables');
 			$row = JTable::getInstance('K2User', 'Table');

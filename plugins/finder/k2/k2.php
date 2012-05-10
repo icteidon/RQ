@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: k2.php 1470 2012-02-09 10:39:35Z lefteris.kavadas $
+ * @version		$Id: k2.php 1575 2012-05-09 12:09:32Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.

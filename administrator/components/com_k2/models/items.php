@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: items.php 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @version		$Id: items.php 1560 2012-04-26 12:42:28Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -667,10 +667,17 @@ class K2ModelItems extends JModel {
 			preg_match_all("#^{(.*?)}(.*?){#", $row->video, $matches, PREG_PATTERN_ORDER);
 			$videotype = $matches[1][0];
 			$videofile = $matches[2][0];
+            
+            $videoExtensions = array('flv', 'mp4', 'ogv', 'webm', 'f4v', 'm4v', '3gp', '3g2', 'mov', 'mpeg', 'mpg', 'avi', 'wmv', 'divx', 'swf');
+            $audioExtensions = array('mp3', 'aac', 'mp4', 'ogg', 'wma');
 
-			if ($videotype == 'flv' || $videotype == 'swf' || $videotype == 'wmv' || $videotype == 'mov' || $videotype == 'mp4' || $videotype == '3gp' || $videotype == 'divx') {
+			if (in_array($videotype, $videoExtensions) || in_array($videotype, $audioExtensions)) {
+			    
 				if (JFile::exists(JPATH_ROOT.DS.'media'.DS.'k2'.DS.'videos'.DS.$videofile.'.'.$videotype))
 				JFile::delete(JPATH_ROOT.DS.'media'.DS.'k2'.DS.'videos'.DS.$videofile.'.'.$videotype);
+                
+                if (JFile::exists(JPATH_ROOT.DS.'media'.DS.'k2'.DS.'audio'.DS.$videofile.'.'.$videotype))
+                JFile::delete(JPATH_ROOT.DS.'media'.DS.'k2'.DS.'audio'.DS.$videofile.'.'.$videotype);
 			}
 
 			//Delete attachments

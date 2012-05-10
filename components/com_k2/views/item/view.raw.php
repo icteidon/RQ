@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: view.raw.php 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @version		$Id: view.raw.php 1557 2012-04-23 12:26:00Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -182,7 +182,8 @@ class K2ViewItem extends JView {
 			$item->emailLink = JRoute::_('index.php?option=com_mailto&tmpl=component&template='.$template.'&link='.MailToHelper::addLink($item->absoluteURL));
 		}
 		else {
-			$item->emailLink = JRoute::_('index.php?option=com_mailto&tmpl=component&link='.base64_encode($item->absoluteURL));
+			require_once(JPATH_SITE.DS.'components'.DS.'com_mailto'.DS.'helpers'.DS.'mailto.php');
+			$item->emailLink = JRoute::_('index.php?option=com_mailto&tmpl=component&link='.MailToHelper::addLink($item->absoluteURL));
 		}
 
 		// Twitter link (legacy code)

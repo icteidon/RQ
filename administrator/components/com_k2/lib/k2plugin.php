@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: k2plugin.php 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @version		$Id: k2plugin.php 1545 2012-04-17 13:09:26Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -30,6 +30,10 @@ class K2Plugin extends JPlugin {
 		}
 		else {
 			$path = $type;
+		}
+		if(!isset($item->plugins))
+		{
+			$item->plugins = NULL;
 		}
 		$form = new K2Parameter($item->plugins, $manifest, $this->pluginName);
 		$fields = $form->render('plugins', $path);

@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: view.raw.php 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @version		$Id: view.raw.php 1579 2012-05-09 14:19:31Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -85,7 +85,15 @@ class K2ViewItemlist extends JView {
 				$dispatcher = &JDispatcher::getInstance();
 				JPluginHelper::importPlugin('content');
 				$category->text = $category->description;
-				$dispatcher->trigger('onPrepareContent', array ( & $category, &$params, $limitstart));
+				
+                if(K2_JVERSION=='16')
+                {
+                    $dispatcher->trigger('onContentPrepare', array ('com_k2.category', &$category, &$params, $limitstart));
+                }
+                else {
+                    $dispatcher->trigger('onPrepareContent', array ( & $category, &$params, $limitstart));
+                }
+
 				$category->description = $category->text;
 
 				//Category K2 plugins

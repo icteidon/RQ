@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: item.php 1521 2012-03-08 19:35:58Z joomlaworks $
+ * @version		$Id: item.php 1549 2012-04-18 18:57:05Z joomlaworks $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -94,8 +94,8 @@ class K2ControllerItem extends JController
 		}
 
 		// CSS
-		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.css?v=2.5.6');
-		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.frontend.css?v=2.5.6');
+		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.css?v=2.5.7');
+		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.frontend.css?v=2.5.7');
 		$document->addStyleSheet(JURI::root(true).'/templates/system/css/general.css');
 		$document->addStyleSheet(JURI::root(true).'/templates/system/css/system.css');
 
@@ -118,7 +118,7 @@ class K2ControllerItem extends JController
 		{
 			$document->addScript(JURI::root(true).'/media/k2/assets/js/jquery-ui-1.8.16.custom.min.js');
 		}
-		$document->addScript(JURI::root(true).'/media/k2/assets/js/k2.js?v=2.5.6');
+		$document->addScript(JURI::root(true).'/media/k2/assets/js/k2.js?v=2.5.7');
 
 		$this->addViewPath(JPATH_COMPONENT_ADMINISTRATOR.DS.'views');
 		$this->addModelPath(JPATH_COMPONENT_ADMINISTRATOR.DS.'models');
@@ -314,7 +314,7 @@ class K2ControllerItem extends JController
 		}
 
 		// CSS
-		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.css?v=2.5.6');
+		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.css?v=2.5.7');
 
 		// JS
 		$jQueryHandling = $params->get('jQueryHandling', '1.7remote');
@@ -335,7 +335,7 @@ class K2ControllerItem extends JController
 		{
 			$document->addScript(JURI::root(true).'/media/k2/assets/js/jquery-ui-1.8.16.custom.min.js');
 		}
-		$document->addScript(JURI::root(true).'/media/k2/assets/js/k2.js?v=2.5.6');
+		$document->addScript(JURI::root(true).'/media/k2/assets/js/k2.js?v=2.5.7');
 		$this->addViewPath(JPATH_COMPONENT_ADMINISTRATOR.DS.'views');
 		$view = &$this->getView('media', 'html');
 		$view->addTemplatePath(JPATH_COMPONENT_ADMINISTRATOR.DS.'views'.DS.'media'.DS.'tmpl');
@@ -393,7 +393,7 @@ class K2ControllerItem extends JController
 		}
 
 		// CSS
-		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.css?v=2.5.6');
+		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.css?v=2.5.7');
 
 		// JS
 		$jQueryHandling = $params->get('jQueryHandling', '1.7remote');
@@ -407,7 +407,7 @@ class K2ControllerItem extends JController
 			$document->addScript(JURI::root(true).'/media/k2/assets/js/jquery-'.$jQueryHandling.'.min.js');
 			$document->addScript(JURI::root(true).'/media/k2/assets/js/jquery-ui-1.8.16.custom.min.js');
 		}
-		$document->addScript(JURI::root(true).'/media/k2/assets/js/k2.js?v=2.5.6');
+		$document->addScript(JURI::root(true).'/media/k2/assets/js/k2.js?v=2.5.7');
 
 		$this->addViewPath(JPATH_COMPONENT_ADMINISTRATOR.DS.'views');
 		$this->addModelPath(JPATH_COMPONENT_ADMINISTRATOR.DS.'models');

@@ -225,17 +225,18 @@ z-index:5;
 
 #middle-site >div {
 margin-bottom:20px;
-border : 7px solid #e2dbc9;
+border : 7px solid #fff;
 }
 
 #middle-site >div >div {
 height: 500px;
 height: auto !important;
 min-height:500px;
-background: #f2e5cd url(../images/bg-content.jpg) 0 0 repeat-x;
-border : 2px solid #eee;
+background: #fff url(../images/bg-content.jpg) 0 0 repeat-x;
+
 text-align:left;
 padding:20px;
+opacity:0.9;  
 }
 
 .center-table {

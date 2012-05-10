@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: k2.php 1536 2012-04-04 16:04:27Z lefteris.kavadas $
+ * @version		$Id: k2.php 1552 2012-04-19 12:10:57Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -158,7 +158,7 @@ class plgSearchK2 extends JPlugin
 	    AND c.trash = 0
 	    AND ( i.publish_up = ".$db->Quote($nullDate)." OR i.publish_up <= ".$db->Quote($now)." )
         AND ( i.publish_down = ".$db->Quote($nullDate)." OR i.publish_down >= ".$db->Quote($now)." )";
-			if (K2_JVERSION == '16' && $mainframe->getLanguageFilter())
+			if (K2_JVERSION == '16' && $mainframe->isSite() && $mainframe->getLanguageFilter())
 			{
 				$languageTag = JFactory::getLanguage()->getTag();
 				$query .= " AND c.language IN (".$db->Quote($languageTag).", ".$db->Quote('*').") AND i.language IN (".$db->Quote($languageTag).", ".$db->Quote('*').") ";

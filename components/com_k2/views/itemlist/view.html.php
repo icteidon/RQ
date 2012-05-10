@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: view.html.php 1511 2012-03-01 21:41:16Z joomlaworks $
+ * @version		$Id: view.html.php 1579 2012-05-09 14:19:31Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -69,6 +69,13 @@ class K2ViewItemlist extends JView {
 
 				// Merge params
 				$cparams = new JParameter($category->params);
+				
+				// Get the meta information before merging params since we do not want them to be inherited
+				$category->metaDescription = $cparams->get('catMetaDesc');
+				$category->metaKeywords = $cparams->get('catMetaKey');
+				$category->metaRobots = $cparams->get('catMetaRobots');
+				$category->metaAuthor = $cparams->get('catMetaAuthor');
+				
 				if ($cparams->get('inheritFrom')) {
 						$masterCategory = &JTable::getInstance('K2Category', 'Table');
 						$masterCategory->load($cparams->get('inheritFrom'));
@@ -86,7 +93,14 @@ class K2ViewItemlist extends JView {
 				$dispatcher = &JDispatcher::getInstance();
 				JPluginHelper::importPlugin('content');
 				$category->text = $category->description;
-				$dispatcher->trigger('onPrepareContent', array ( & $category, &$params, $limitstart));
+                if(K2_JVERSION=='16')
+                {
+                    $dispatcher->trigger('onContentPrepare', array ('com_k2.category', &$category, &$params, $limitstart));
+                }
+                else {
+                    $dispatcher->trigger('onPrepareContent', array ( & $category, &$params, $limitstart));
+                }
+				
 				$category->description = $category->text;
 
 				// Category K2 plugins
@@ -361,8 +375,8 @@ class K2ViewItemlist extends JView {
 
 		// Set metadata for category
 		if($task == 'category') {
-			if ($params->get('catMetaDesc')) {
-				$document->setDescription($params->get('catMetaDesc'));
+			if ($category->metaDescription) {
+				$document->setDescription($category->metaDescription);
 			}
 			else {
 				$metaDescItem = preg_replace("#{(.*?)}(.*?){/(.*?)}#s", '', $this->category->description);
@@ -370,14 +384,14 @@ class K2ViewItemlist extends JView {
 				$metaDescItem = htmlentities($metaDescItem, ENT_QUOTES, 'utf-8');
 				$document->setDescription($metaDescItem);
 			}
-			if ($params->get('catMetaKey')) {
-				$document->setMetadata('keywords', $params->get('catMetaKey'));
+			if ($category->metaKeywords) {
+				$document->setMetadata('keywords', $category->metaKeywords);
 			}
-			if ($params->get('catMetaRobots')) {
-				$document->setMetadata('robots', $params->get('catMetaRobots'));
+			if ($category->metaRobots) {
+				$document->setMetadata('robots', $category->metaRobots);
 			}
-			if ($params->get('catMetaAuthor')) {
-				$document->setMetadata('author', $params->get('catMetaAuthor'));
+			if ($category->metaAuthor) {
+				$document->setMetadata('author', $category->metaAuthor);
 			}
 		}
 

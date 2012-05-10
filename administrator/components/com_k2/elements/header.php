@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: header.php 1521 2012-03-08 19:35:58Z joomlaworks $
+ * @version		$Id: header.php 1549 2012-04-18 18:57:05Z joomlaworks $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -35,7 +35,7 @@ class JElementHeader extends JElement {
 
 	function fetchElement($name, $value, &$node, $control_name){
 		$document = & JFactory::getDocument();
-		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.modules.css?v=2.5.6');
+		$document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.modules.css?v=2.5.7');
 		if(K2_JVERSION=='16'){
 			return '<div class="paramHeaderContainer"><div class="paramHeaderContent">'.JText::_($value).'</div><div class="k2clr"></div></div>';
 		} else {

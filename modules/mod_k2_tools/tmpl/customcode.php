@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: customcode.php 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @version		$Id: customcode.php 1575 2012-05-09 12:09:32Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.

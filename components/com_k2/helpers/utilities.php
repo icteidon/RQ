@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: utilities.php 1492 2012-02-22 17:40:09Z joomlaworks@gmail.com $
+ * @version		$Id: utilities.php 1544 2012-04-17 10:00:44Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -22,8 +22,11 @@ class K2HelperUtilities {
 		
 		if(K2_CB && $userID != 'alias') {
 			$cbUser = CBuser::getInstance( (int) $userID );
-			$avatar  = $cbUser->getField( 'avatar', null, 'csv', 'none', 'profile');
-			return $avatar;
+			if(is_object($cbUser))
+			{
+				$avatar  = $cbUser->getField( 'avatar', null, 'csv', 'none', 'profile');
+				return $avatar;
+			}
 		}
 
 		/*

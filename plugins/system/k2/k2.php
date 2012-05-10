@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: k2.php 1533 2012-03-28 16:23:01Z lefteris.kavadas $
+ * @version		$Id: k2.php 1549 2012-04-18 18:57:05Z joomlaworks $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -131,6 +131,15 @@ class plgSystemK2 extends JPlugin
 		$layout = JRequest::getCmd('layout');
 		$user = &JFactory::getUser();
 
+		if (K2_JVERSION == '16')
+		{
+			$active = JFactory::getApplication()->getMenu()->getActive();
+			if (isset($active->query['layout']))
+			{
+				$layout = $active->query['layout'];
+			}
+		}
+
 		if (($option == 'com_user' && $view == 'register') || ($option == 'com_users' && $view == 'registration'))
 		{
 
@@ -214,7 +223,7 @@ class plgSystemK2 extends JPlugin
 
 		}
 
-		if (($option == 'com_user' && $view == 'user' && ($task == 'edit' || $layout == 'form')) || ($option == 'com_users' && $view == 'profile' && $layout == 'edit'))
+		if (($option == 'com_user' && $view == 'user' && ($task == 'edit' || $layout == 'form')) || ($option == 'com_users' && $view == 'profile' && ($layout == 'edit' || $task == 'profile.edit')))
 		{
 
 			if ($user->guest)
@@ -236,7 +245,7 @@ class plgSystemK2 extends JPlugin
 			/*
 			 // TO DO - We open the profile editing page in a modal, so let's define some CSS
 			 $document = &JFactory::getDocument();
-			 $document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.frontend.css?v=2.5.6');
+			 $document->addStyleSheet(JURI::root(true).'/media/k2/assets/css/k2.frontend.css?v=2.5.7');
 			 $document->addStyleSheet(JURI::root(true).'/templates/system/css/general.css');
 			 $document->addStyleSheet(JURI::root(true).'/templates/system/css/system.css');
 			 if(K2_JVERSION == '16') {
@@ -285,6 +294,11 @@ class plgSystemK2 extends JPlugin
 			ob_start();
 			if (K2_JVERSION == '16')
 			{
+				$active = JFactory::getApplication()->getMenu()->getActive();
+				if (isset($active->query['layout']) && $active->query['layout'] != 'profile')
+				{
+					$active->query['layout'] = 'profile';
+				}
 				$view->assignRef('user', $user);
 				$view->display();
 			}
@@ -341,11 +355,11 @@ class plgSystemK2 extends JPlugin
 			{
 				$db = JFactory::getDBO();
 				$config = JFactory::getConfig();
-				$prefix = $config->getValue('config.dbprefix');				
+				$prefix = $config->getValue('config.dbprefix');
 				if (array_key_exists($prefix.'_jf_languages_ext', $db->getTableList()))
 				{
 					define('K2_JF_ID', 'lang_id');
-					
+
 				}
 				else
 				{

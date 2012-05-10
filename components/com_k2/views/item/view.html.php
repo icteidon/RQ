@@ -1,6 +1,6 @@
 <?php
 /**
- * @version		$Id: view.html.php 1511 2012-03-01 21:41:16Z joomlaworks $
+ * @version		$Id: view.html.php 1557 2012-04-23 12:26:00Z lefteris.kavadas $
  * @package		K2
  * @author		JoomlaWorks http://www.joomlaworks.net
  * @copyright	Copyright (c) 2006 - 2012 JoomlaWorks Ltd. All rights reserved.
@@ -241,7 +241,8 @@ class K2ViewItem extends JView {
 			$item->emailLink = JRoute::_('index.php?option=com_mailto&tmpl=component&template='.$template.'&link='.MailToHelper::addLink($item->absoluteURL));
 		}
 		else {
-			$item->emailLink = JRoute::_('index.php?option=com_mailto&tmpl=component&link='.base64_encode($item->absoluteURL));
+			require_once(JPATH_SITE.DS.'components'.DS.'com_mailto'.DS.'helpers'.DS.'mailto.php');
+			$item->emailLink = JRoute::_('index.php?option=com_mailto&tmpl=component&link='.MailToHelper::addLink($item->absoluteURL));
 		}
 		
 		// Twitter link (legacy code)
@@ -354,8 +355,10 @@ class K2ViewItem extends JView {
 		
 		// Load Facebook meta tag for item image
 		$facebookImage = 'image'.$params->get('facebookImage','Small');
-		$document->setMetaData('image',substr(JURI::root(),0,-1).str_replace(JURI::root(true),'',$item->$facebookImage));
-
+		if($item->$facebookImage){
+			$document->setMetaData('image',substr(JURI::root(),0,-1).str_replace(JURI::root(true),'',$item->$facebookImage));
+		}
+		
 		// Look for template files in component folders
 		$this->_addPath('template', JPATH_COMPONENT.DS.'templates');
 		$this->_addPath('template', JPATH_COMPONENT.DS.'templates'.DS.'default');
